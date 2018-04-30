@@ -3,6 +3,7 @@ package chargen
 import (
 	"encoding/json"
 	"fmt"
+	. "github.com/kniren/gota/dataframe"
 	"io/ioutil"
 	"os"
 )
@@ -17,7 +18,15 @@ const (
 	weaponFile  string = "assets/weapons.json"
 )
 
-type Characteristic []interface{}
+type CharacterDatabase struct {
+	Abilities DataFrame
+	Armors    DataFrame
+	Benefits  DataFrame
+	Careers   DataFrame
+	Skills    DataFrame
+	Spells    DataFrame
+	Weapons   DataFrame
+}
 
 type Ability struct {
 	Ability        string `json:"Ability"`
@@ -90,16 +99,6 @@ type Weapon struct {
 	Special  string  `json:"Special"`
 }
 
-type CharacterDatabase struct {
-	Abilities []Ability
-	Benefits  []Benefit
-	Skills    []Skill
-	Armors    []Armor
-	Careers   []Career
-	Spells    []Spell
-	Weapons   []Weapon
-}
-
 func readJson(filename string) []byte {
 	raw, err := ioutil.ReadFile(filename)
 	if err != nil {
@@ -109,49 +108,39 @@ func readJson(filename string) []byte {
 	return raw
 }
 
-func (c *CharacterDatabase) getAbilities() {
-	raw := readJson(abilityFile)
-	json.Unmarshal(raw, &c.Abilities)
-}
-
-func (c *CharacterDatabase) getSkills() {
-	raw := readJson(skillFile)
-	json.Unmarshal(raw, &c.Skills)
-}
-
-func (c *CharacterDatabase) getArmors() {
-	raw := readJson(armorFile)
-	json.Unmarshal(raw, &c.Armors)
-}
-
-func (c *CharacterDatabase) getCareers() {
-	raw := readJson(careerFile)
-	json.Unmarshal(raw, &c.Careers)
-}
-
-func (c *CharacterDatabase) getSpells() {
-	raw := readJson(spellFile)
-	json.Unmarshal(raw, &c.Spells)
-}
-
-func (c *CharacterDatabase) getBenefits() {
-	raw := readJson(benefitFile)
-	json.Unmarshal(raw, &c.Benefits)
-}
-
-func (c *CharacterDatabase) getWeapons() {
-	raw := readJson(weaponFile)
-	json.Unmarshal(raw, &c.Weapons)
+func (c *CharacterDatabase) Build() {
+	// Abilities
+	var abils = []Ability{}
+	json.Unmarshal(readJson(abilityFile), &abils)
+	c.Abilities = LoadStructs(abils)
+	// Armors
+	var armors = []Armor{}
+	json.Unmarshal(readJson(armorFile), &armors)
+	c.Armors = LoadStructs(armors)
+	// Benefits
+	var bens = []Benefit{}
+	json.Unmarshal(readJson(benefitFile), &bens)
+	c.Benefits = LoadStructs(bens)
+	// Careers
+	var cars = []Career{}
+	json.Unmarshal(readJson(careerFile), &cars)
+	c.Careers = LoadStructs(cars)
+	// Skills
+	var skills = []Skill{}
+	json.Unmarshal(readJson(skillFile), &skills)
+	c.Skills = LoadStructs(skills)
+	// Spells
+	var spells = []Spell{}
+	json.Unmarshal(readJson(spellFile), &spells)
+	c.Abilities = LoadStructs(spells)
+	// Weapons
+	var weaps = []Weapon{}
+	json.Unmarshal(readJson(weaponFile), &weaps)
+	c.Weapons = LoadStructs(weaps)
 }
 
 var CharDB = CharacterDatabase{}
 
 func init() {
-	CharDB.getAbilities()
-	CharDB.getArmors()
-	CharDB.getBenefits()
-	CharDB.getCareers()
-	CharDB.getSkills()
-	CharDB.getSpells()
-	CharDB.getWeapons()
+	CharDB.Build()
 }
