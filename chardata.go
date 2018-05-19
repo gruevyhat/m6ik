@@ -2,34 +2,40 @@ package chargen
 
 import (
 	"encoding/json"
-	"fmt"
-	. "github.com/kniren/gota/dataframe"
+	"github.com/kniren/gota/dataframe"
+	"github.com/kniren/gota/series"
 	"io/ioutil"
+	"log"
 	"os"
+	"strings"
 )
 
 const (
-	abilityFile string = "assets/abilities.json"
-	armorFile   string = "assets/armors.json"
-	benefitFile string = "assets/benefits.json"
-	careerFile  string = "assets/careers.json"
-	skillFile   string = "assets/skills.json"
-	spellFile   string = "assets/spells.json"
-	weaponFile  string = "assets/weapons.json"
+	perkFile      = "assets/perks.json"
+	armorFile     = "assets/armors.json"
+	archetypeFile = "assets/archetypes.json"
+	careerFile    = "assets/careers.json"
+	raceFile      = "assets/races.json"
+	skillFile     = "assets/skills.json"
+	spellFile     = "assets/spells.json"
+	weaponFile    = "assets/weapons.json"
+	startErr      = "\033[31m"
+	endErr        = "\033[0m"
 )
 
 type CharacterDatabase struct {
-	Abilities DataFrame
-	Armors    DataFrame
-	Benefits  DataFrame
-	Careers   DataFrame
-	Skills    DataFrame
-	Spells    DataFrame
-	Weapons   DataFrame
+	Perks      dataframe.DataFrame
+	Armors     dataframe.DataFrame
+	Archetypes dataframe.DataFrame
+	Careers    dataframe.DataFrame
+	Races      dataframe.DataFrame
+	Skills     dataframe.DataFrame
+	Spells     dataframe.DataFrame
+	Weapons    dataframe.DataFrame
 }
 
-type Ability struct {
-	Ability        string `json:"Ability"`
+type Perk struct {
+	Perk           string `json:"Perk"`
 	Cp             string `json:"CP Cost"`
 	Prerequisites  string `json:"Prerequisites"`
 	Description    string `json:"Description"`
@@ -37,22 +43,21 @@ type Ability struct {
 	OldDescription string `json:"Old IKRPG Description"`
 }
 
-type Benefit struct {
-	Benefit             string `json:"Benefit"`
-	Archetype           string `json:"Archetype"`
-	Description         string `json:"Description"`
-	OldIKRPGDescription string `json:"Old IKRPG Description"`
+type Archetype struct {
+	Archetype     string `json:"Archetype"`
+	Bonus         string `json:"Bonus"`
+	Proscriptions string `json:"Proscriptions"`
 }
 
 type Skill struct {
-	Skill         string `json:"skill"`
-	Attribute     string `json:"attribute"`
-	SkillType     string `json:"skillType"`
-	Social        string `json:"social"`
-	Advanced      string `json:"advanced"`
-	Prerequisites string `json:"prerequisites"`
-	Description   string `json:"description"`
-	IkrpgSkill    string `json:"ikrpgSkill"`
+	Skill         string `json:"Skill"`
+	Type          string `json:"Type"`
+	Attribute     string `json:"Attribute"`
+	SkillType     string `json:"Skill Type"`
+	Social        string `json:"Social"`
+	Advanced      string `json:"Advanced"`
+	Prerequisites string `json:"Prerequisites"`
+	Description   string `json:"Description"`
 }
 
 type Armor struct {
@@ -66,13 +71,26 @@ type Armor struct {
 
 type Career struct {
 	Career              string  `json:"Career"`
-	Abilities           string  `json:"Abilities"`
+	Type                string  `json:"Type"`
+	Perks               string  `json:"Perks"`
 	SkillMaximums       string  `json:"Skill Maximums"`
 	Restrictions        string  `json:"Restrictions"`
 	Special             string  `json:"Special"`
 	StartingAssets      string  `json:"Starting Assets"`
 	StartingConnections string  `json:"Starting Connections"`
 	StartingMoney       float32 `json:"Starting Money"`
+}
+
+type Race struct {
+	Race           string `json:"Race"`
+	Type           string `json:"Type"`
+	Attributes     string `json:"Attributes"`
+	Skills         string `json:"Skills"`
+	Perks          string `json:"Perks"`
+	StaticDefenses string `json:"Static Defenses"`
+	Special        string `json:"Special"`
+	Proscriptions  string `json:"Proscriptions"`
+	Description    string `json:"Description"`
 }
 
 type Spell struct {
@@ -99,48 +117,105 @@ type Weapon struct {
 	Special  string  `json:"Special"`
 }
 
-func readJson(filename string) []byte {
-	raw, err := ioutil.ReadFile(filename)
-	if err != nil {
-		fmt.Println(err.Error())
-		os.Exit(1)
+var charDataLog = log.New(os.Stderr, "CHARDATA: ", 11)
+
+func logger(f func(string) ([]byte, error)) func(string) []byte {
+	return func(s string) []byte {
+		out, err := f(s)
+		if err != nil {
+			charDataLog.Println(startErr, err, endErr)
+		}
+		return out
 	}
+}
+
+func readJson(filename string) []byte {
+	raw := logger(ioutil.ReadFile)(filename)
 	return raw
 }
 
 func (c *CharacterDatabase) Build() {
-	// Abilities
-	var abils = []Ability{}
-	json.Unmarshal(readJson(abilityFile), &abils)
-	c.Abilities = LoadStructs(abils)
+	// Perks
+	var abils = []Perk{}
+	json.Unmarshal(readJson(perkFile), &abils)
+	c.Perks = dataframe.LoadStructs(abils)
 	// Armors
 	var armors = []Armor{}
 	json.Unmarshal(readJson(armorFile), &armors)
-	c.Armors = LoadStructs(armors)
-	// Benefits
-	var bens = []Benefit{}
-	json.Unmarshal(readJson(benefitFile), &bens)
-	c.Benefits = LoadStructs(bens)
+	c.Armors = dataframe.LoadStructs(armors)
+	// Archetypes
+	var archs = []Archetype{}
+	json.Unmarshal(readJson(archetypeFile), &archs)
+	c.Archetypes = dataframe.LoadStructs(archs)
 	// Careers
 	var cars = []Career{}
 	json.Unmarshal(readJson(careerFile), &cars)
-	c.Careers = LoadStructs(cars)
+	c.Careers = dataframe.LoadStructs(cars)
+	// Races
+	var races = []Race{}
+	json.Unmarshal(readJson(raceFile), &races)
+	c.Races = dataframe.LoadStructs(races)
 	// Skills
 	var skills = []Skill{}
 	json.Unmarshal(readJson(skillFile), &skills)
-	c.Skills = LoadStructs(skills)
+	c.Skills = dataframe.LoadStructs(skills)
 	// Spells
 	var spells = []Spell{}
 	json.Unmarshal(readJson(spellFile), &spells)
-	c.Abilities = LoadStructs(spells)
+	c.Perks = dataframe.LoadStructs(spells)
 	// Weapons
 	var weaps = []Weapon{}
 	json.Unmarshal(readJson(weaponFile), &weaps)
-	c.Weapons = LoadStructs(weaps)
+	c.Weapons = dataframe.LoadStructs(weaps)
 }
 
 var CharDB = CharacterDatabase{}
 
+var ops = map[string]series.Comparator{
+	"==": series.Eq,
+	"!=": series.Neq,
+}
+
+func dropIfNotIn(df dataframe.DataFrame, col string, vals []string) dataframe.DataFrame {
+	filters := make([]dataframe.F, len(vals))
+	for i, val := range vals {
+		filters[i] = dataframe.F{col, series.Eq, val}
+	}
+	newdf := df.Filter(filters...)
+	return newdf
+}
+
+func filterDf(df dataframe.DataFrame, col, op, val string) dataframe.DataFrame {
+	newdf := df.Filter(
+		dataframe.F{col, ops[op], val},
+	)
+	return newdf
+}
+
+func (db *CharacterDatabase) filter(table, col, op, val string) {
+	switch table {
+	case "Perks":
+		db.Perks = filterDf(db.Perks, col, op, val)
+	case "Armors":
+		db.Armors = filterDf(db.Armors, col, op, val)
+	case "Archetypes":
+		db.Archetypes = filterDf(db.Archetypes, col, op, val)
+	case "Careers":
+		db.Careers = filterDf(db.Careers, col, op, val)
+	case "Races":
+		db.Races = filterDf(db.Races, col, op, val)
+	case "Skills":
+		db.Skills = filterDf(db.Skills, col, op, val)
+	case "Spells":
+		db.Spells = filterDf(db.Spells, col, op, val)
+	case "Weapons":
+		db.Weapons = filterDf(db.Weapons, col, op, val)
+	}
+}
+
+var Casters []string
+
 func init() {
 	CharDB.Build()
+	Casters = strings.Split(CharDB.Archetypes.Col("Proscriptions").Records()[0], ", ")
 }

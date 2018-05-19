@@ -6,7 +6,7 @@ import (
 
 func main() {
 
-	c := GenerateCharacter()
+	c := NewCharacter()
 	c.Print()
 
 }
