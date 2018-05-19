@@ -1,0 +1,22 @@
+[
+  {
+    "Archetype": "Mighty",
+    "Bonus": "+1D Strength",
+    "Proscriptions": "Arcanist, Arcane Mechanik, Blackclad, Bloodweaver, Bokor, Bone Grinder, Croak Conjoined Twin, Gun Mage, Mist Speaker, Priest, Scrutator, Shaman, Sorcerer, Warcaster, Warlock, Thamarite Advocate"
+  },
+  {
+    "Archetype": "Gifted",
+    "Bonus": "+1D Arcane",
+    "Proscriptions": ""
+  },
+  {
+    "Archetype": "Intellectual",
+    "Bonus": "+1D Intellect or +1D Technical",
+    "Proscriptions": "Arcanist, Arcane Mechanik, Blackclad, Bloodweaver, Bokor, Bone Grinder, Croak Conjoined Twin, Gun Mage, Mist Speaker, Priest, Scrutator, Shaman, Sorcerer, Warcaster, Warlock, Thamarite Advocate"
+  },
+  {
+    "Archetype": "Skilled",
+    "Bonus": "+1D Agility or +1D Perception",
+    "Proscriptions": "Arcanist, Arcane Mechanik, Blackclad, Bloodweaver, Bokor, Bone Grinder, Croak Conjoined Twin, Gun Mage, Mist Speaker, Priest, Scrutator, Shaman, Sorcerer, Warcaster, Warlock, Thamarite Advocate"
+  }
+]

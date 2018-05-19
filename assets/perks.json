@@ -1,0 +1,2606 @@
+[
+  {
+    "Perk": "Abomination",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "In battle, friendly and enemy chars. must pass an opposed Willpower roll with this character or flee. Can reroll Intimidation rolls, can only reroll once as a result of Abomination."
+  },
+  {
+    "Perk": "Ace Commander",
+    "Level": 4,
+    "Prerequisites": "Jack Marshal, Command 3D",
+    "Description": "One Drive per round may be issued as a free action."
+  },
+  {
+    "Perk": "Acrobatics",
+    "Level": 4,
+    "Prerequisites": "Agility 3D",
+    "Description": "The character can make an Easy Athletics roll to advance through other characters if he has enough movement to move completely past their bases. The character also gains a +1D on Athletic skill rolls."
+  },
+  {
+    "Perk": "Adaptable (Urban)",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "In an urban environment, Character can reroll failed Athletics rolls involving climbing and jumping. Each roll can only be rerolled once as a result of Adaptable (Urban)"
+  },
+  {
+    "Perk": "Additional Study",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Learn a Form not normally allowed to your careers."
+  },
+  {
+    "Perk": "Adjust Aim",
+    "Level": 4,
+    "Prerequisites": "Archery 3D",
+    "Description": "If this character misses with a bow ranged attack, he gains +1D to his next ranged attack roll with a bow."
+  },
+  {
+    "Perk": "Advance Move",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "At the start of combat before initiative is rolled, this character can make a free Cautious move action."
+  },
+  {
+    "Perk": "Advisor",
+    "Level": 4,
+    "Prerequisites": "Command 7D",
+    "Description": "Spend an action to double Command bonuses for another character."
+  },
+  {
+    "Perk": "Aegis",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Any elemental spell effects on this character dissipate after one turn."
+  },
+  {
+    "Perk": "Always a Deal to be Made",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When making a deal that involves buying or selling goods or services, the difficulty cannot exceed Difficult."
+  },
+  {
+    "Perk": "Ambidextrous",
+    "Level": 4,
+    "Prerequisites": "Skilled",
+    "Description": "You can use either hand equally well. Does not convey additional attacks."
+  },
+  {
+    "Perk": "Ambush",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "During the first round of an encounter, this character gains +1D to attack and damage rolls against enemies that have not yet acted."
+  },
+  {
+    "Perk": "Anatomical Precision",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When the character hits a living target with a melee attack but the damage roll fails to exceed the target's soak, the target suffers one 'stunned' wound level."
+  },
+  {
+    "Perk": "Applied Knowledge",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "A friendly character within hearing of this character cannot be targeted by called shots for one round."
+  },
+  {
+    "Perk": "Appraise",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "You have a sharp eye, especially where values are concerned. You can judge the value of most fine goods with an inspection. Good fakes might require a Search roll to spot."
+  },
+  {
+    "Perk": "Arcane Assassin",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character's melee and ranged attacks ignore magical defenses."
+  },
+  {
+    "Perk": "Arcane Defenses",
+    "Level": 4,
+    "Prerequisites": "Arcane 3D",
+    "Description": "This character gains +1D soak against magical attacks."
+  },
+  {
+    "Perk": "Arcane Engineer",
+    "Level": 4,
+    "Prerequisites": "Mechnikal Engineering 7D",
+    "Description": "The character can re-roll failed Mechanikal Engineering rolls."
+  },
+  {
+    "Perk": "Arcane Precision",
+    "Level": 4,
+    "Prerequisites": "Detection 7D",
+    "Description": "When this character forfeits his movement to aim with a ranged weapon, he ignores stealth that turn."
+  },
+  {
+    "Perk": "Arcane Rider",
+    "Level": 3,
+    "Prerequisites": "Gifted",
+    "Description": ""
+  },
+  {
+    "Perk": "Arcane Scholar",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character can have a number of spells equal to his Magical skill pips x2."
+  },
+  {
+    "Perk": "Archer",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Character can forfeit his movement to gain +1D with a bow."
+  },
+  {
+    "Perk": "Archmage",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The caster may reroll a failed spellcasting roll. "
+  },
+  {
+    "Perk": "Arcing Shot",
+    "Level": 4,
+    "Prerequisites": "Archery 3D",
+    "Description": "When making a ranged attack with a bow, this character can ignore intervening characters and cover, except those within 1 of the target."
+  },
+  {
+    "Perk": "Artificer",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can create wolds."
+  },
+  {
+    "Perk": "Astute",
+    "Level": 4,
+    "Prerequisites": "Detection 3D",
+    "Description": "The character can re-roll failed Search rolls."
+  },
+  {
+    "Perk": "Authority",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "A character with this ability gains +1D on Perception skill rolls when dealing with other Menites."
+  },
+  {
+    "Perk": "Backstab",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character gains an additional die on his back strike damage rolls."
+  },
+  {
+    "Perk": "Balm of Dhunia",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can reroll failed Animal Handling and Medicine skill rolls. Each failed roll can be rerolled only once as a result of Balm of Dhunia."
+  },
+  {
+    "Perk": "Battle Commander",
+    "Level": 4,
+    "Prerequisites": "Command 7D",
+    "Description": "This character can use one battle plan during each of his turns as a free action."
+  },
+  {
+    "Perk": "Battle Plan: Battlefield Coordination",
+    "Level": 3,
+    "Prerequisites": "Command 3D",
+    "Description": "For one round, while in this character's command range, friendly characters do not suffer the firing into melee penalty for ranged attacks and spells and do not have a chance to hit friendly characters when they miss with ranged or magic attacks while firing into melee."
+  },
+  {
+    "Perk": "Battle Plan: Brutal Charge",
+    "Level": 3,
+    "Prerequisites": "Command 3D",
+    "Description": "Requires a Moderate Tactics check and a Difficult Command check. When a character uses this battle plan, each friendly character who follows his orders gains +2D to his attack damage rolls if moving more than 6m before attacking."
+  },
+  {
+    "Perk": "Battle Plan: Call to Action",
+    "Level": 3,
+    "Prerequisites": "Command 3D",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll. When you use this battle plan, each friendly character in your command range under his command may immediately stand up or go prone."
+  },
+  {
+    "Perk": "Battle Plan: Close Fire",
+    "Level": 3,
+    "Prerequisites": "Command 3D",
+    "Description": "Requires a Moderate Tactics check and a Difficult Command check. When you use this battle plan, friendly characters do not suffer AOE damage from ranged attacks made by this char or friendly char within 10m of this characters."
+  },
+  {
+    "Perk": "Battle Plan: Coordinated Strike",
+    "Level": 3,
+    "Prerequisites": "Command 3D",
+    "Description": "Requires a Moderate Tactics check and a Difficult Command check. Each friendly in 10m can immediately make one reflexive attack. After these attacks, the surprise round ends and the characters are detected."
+  },
+  {
+    "Perk": "Battle Plan: Desperate Pace",
+    "Level": 4,
+    "Prerequisites": "Command 7D",
+    "Description": "Requires a Moderate Tactics check and a Difficult Command check. When a character uses this battle plan, each friendly character who follows his orders gains +2 move for the turn."
+  },
+  {
+    "Perk": "Battle Plan: Double Time",
+    "Level": 3,
+    "Prerequisites": "Command 3D",
+    "Description": "Requires a Moderate Tactics check and a Difficult Command check. When a character uses this battle plan, each friendly character in his command range can immediately make a move at Cautious speed."
+  },
+  {
+    "Perk": "Battle Plan: Go to Ground",
+    "Level": 4,
+    "Prerequisites": "Command 7D",
+    "Description": "Requires a Moderate Tactics check and a Difficult Command check. When a character uses this battle plan, each friendly character who follows his orders gains +2D to Dodge area effects that turn."
+  },
+  {
+    "Perk": "Battle Plan: Orchestrate Fire",
+    "Level": 3,
+    "Prerequisites": "Command 3D",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll. Each friendly character in command range gains +1D on artillery ranged attack rolls. Only last for one round."
+  },
+  {
+    "Perk": "Battle Plan: Reconnaissance",
+    "Level": 4,
+    "Prerequisites": "Command 3D, Survival 3D",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll. You and each friendly character who starts their activation in his CMD gains the Pathfinder ability. Battle Plan: Reconnaissance lasts for one round."
+  },
+  {
+    "Perk": "Battle Plan: Shadow",
+    "Level": 3,
+    "Prerequisites": "Command 3D",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll. When a character uses this Battle Plan, each friendly character who follows his orders gains +2D sneak for one round."
+  },
+  {
+    "Perk": "Battle Plan: Take Cover",
+    "Level": 3,
+    "Prerequisites": "Command 3D",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll during a surprise round. Each friendly in CMD can immediately make one reflexive attack. After these attacks, the surprise round ends and the characters are detected."
+  },
+  {
+    "Perk": "Battlefield Coordinator",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "Friendly characters do not suffer firing into melee penalties with ranged/magic and cannot hit friendly characters if they miss."
+  },
+  {
+    "Perk": "Bayonet Charge",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When you make a charge attack with a ranged weapon that has a bayonet, add the bayonet damage (not incl. Strength) to the ranged weapon damage."
+  },
+  {
+    "Perk": "Beast Handler",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can reroll failed Animal Handling skill rolls. Each failed roll can be rerolled only once as a result of Beast Handler."
+  },
+  {
+    "Perk": "Beat Back",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "When you hit with a melee attack, you may push your target 2m directly away and then advance up to 2m."
+  },
+  {
+    "Perk": "Berserk",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When this char incapacitates or destroys one or more other chars with a melee attack during his turn, immediately after the attack is resolved he must make one additional melee attack against another char in his melee range."
+  },
+  {
+    "Perk": "Big Game Hunter",
+    "Level": 3,
+    "Prerequisites": "Survival 3D",
+    "Description": "When a character with Big Game Hunter makes a melee or ranged attack against an natural animal or beast native to the wilds of Immoren, he gains a bonus on attack rolls equal to his Survival skill."
+  },
+  {
+    "Perk": "Binding",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When the character ties up, manacles or otherwise restrains another character with some form of restraints, add +5 to the skill roll difficulty for the bound character to escape."
+  },
+  {
+    "Perk": "Black Tongue",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Gain 1D on social rolls against infernals. "
+  },
+  {
+    "Perk": "Blade Shield (Nyss Great Sword)",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character is armed with the specified weapon, he may parry ranged attacks on himself and adjacent targets."
+  },
+  {
+    "Perk": "Blaster",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character gains +1D to hit with electrical ranged attacks."
+  },
+  {
+    "Perk": "Blood Boon",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "When you destroy a living character with a melee attack, immediately cast a spell."
+  },
+  {
+    "Perk": "Blood Quenched",
+    "Level": 4,
+    "Prerequisites": "Willpower 7D",
+    "Description": "This character gains a cumulative +1 Strength for each living enemy he destroys with a melee attack during his activation. This bonus lasts for one round."
+  },
+  {
+    "Perk": "Blood Rites",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When making an attack with a sacral blade add the remainder of (attack/difficulty) to the damage."
+  },
+  {
+    "Perk": "Blood Ritual",
+    "Level": 3,
+    "Prerequisites": "Hand Weapon 3D",
+    "Description": "Each time this character makes a melee attack or damage roll, she can suffer a wound level to gain +2D to the roll. The effects of the damage are suffered after the attack roll is made."
+  },
+  {
+    "Perk": "Blood Spiller",
+    "Level": 4,
+    "Prerequisites": "Hand Weapon 7D",
+    "Description": "The character gains +1D on damage rolls against living characters."
+  },
+  {
+    "Perk": "Blood Thirst",
+    "Level": 3,
+    "Prerequisites": "Agility 3D",
+    "Description": "When this character charges a living character, this character gains +2 movement."
+  },
+  {
+    "Perk": "Blood Trade",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can upkeep spells by suffering a wound level per spell instead of paying the action cost for concentration."
+  },
+  {
+    "Perk": "Blood Weaving",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "* As an action, allocate dice from Arcane to an attack made with a Sacral Blade; dice may be allocated to attack, damage, or both.\n* Cast a touch spell on a Sacral Blade. The spell affects the first object struck with the blade."
+  },
+  {
+    "Perk": "Bloodlust",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Character retains reason rather than losing himself to complete madness. Character's willpower is not reduced as a result of wielding a fellblade, and char never becomes a slave to the weapon."
+  },
+  {
+    "Perk": "Blur of Motion",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Each time this character makes a ranged attack with a bow, he can immediately nock another arrow from his quiver without using an action."
+  },
+  {
+    "Perk": "Boarding Action",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Character can use Athletics to jump as a free action immediately after making a full move."
+  },
+  {
+    "Perk": "Bodge",
+    "Level": 3,
+    "Prerequisites": "Mechanical Engineering 3D",
+    "Description": "The character can make temporary repairs to a steamjack in the midst of combat."
+  },
+  {
+    "Perk": "Bodyguard",
+    "Level": 4,
+    "Prerequisites": "Shield Guard, Shield 3D",
+    "Description": "The character is not limited to the number of times it can use Shield Guard each round."
+  },
+  {
+    "Perk": "Bomber",
+    "Level": 4,
+    "Prerequisites": "Thrown Weapon 7D",
+    "Description": "When this character's grenade ranged attacks deviates, you can reroll the deviation and/or the direction of deviation. A roll can only be rerolled once as a result of Bomber."
+  },
+  {
+    "Perk": "Bone Grinding",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Use the remains of creatures to enchant objects."
+  },
+  {
+    "Perk": "Brawler",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When using an improvised melee weapon, Character can use Unarmed Combat skill instead of Hand Weapon Skill for the attack roll."
+  },
+  {
+    "Perk": "Brew Master",
+    "Level": 3,
+    "Prerequisites": "Alchemy 5D",
+    "Description": "You can reroll failed Alchemy rolls. Each failed roll can be rerolled only once as a result of Brew Master."
+  },
+  {
+    "Perk": "Broad Stroke",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character makes his first Great Weapon melee attack during his turn each round, he can spend 1 CP to makes one melee reflexive attack against each enemy in LOS and melee range."
+  },
+  {
+    "Perk": "Brutal Trapper",
+    "Level": 4,
+    "Prerequisites": "Survival 7D",
+    "Description": "Traps constructed by this character gain +1D to damage rolls."
+  },
+  {
+    "Perk": "Bull Rush",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character's mount can make slam attacks."
+  },
+  {
+    "Perk": "Cagey",
+    "Level": 4,
+    "Prerequisites": "Skilled",
+    "Description": "When knocked down, immediately move up to 4m. Stand up without forfeiting movement or action."
+  },
+  {
+    "Perk": "Calm",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While in this character's command range, friendly warbeasts gain +1D to resist Frenzy."
+  },
+  {
+    "Perk": "Camouflage",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Gain +2D to Dodge when benefiting from concealment/cover."
+  },
+  {
+    "Perk": "Card Sharp",
+    "Level": 3,
+    "Prerequisites": "Gambling 5D",
+    "Description": "Add an extra die to your Gambling rolls. Difficulty of the Perception roll to notice the cheating is the cheating character's Gambling skill."
+  },
+  {
+    "Perk": "Careful Practitioner",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character would suffer damage due to a failed ritual, this character suffers a damage roll with half the normal damage instead."
+  },
+  {
+    "Perk": "Cautious Advance",
+    "Level": 4,
+    "Prerequisites": "Survival 7D",
+    "Description": "Character automatically has partial cover while moving at Cautious or slower."
+  },
+  {
+    "Perk": "Cautious Trapper",
+    "Level": 3,
+    "Prerequisites": "Survival 3D",
+    "Description": "If this character fails to disarm a trap, it does not cause the trap to trigger."
+  },
+  {
+    "Perk": "Cavalry Charge",
+    "Level": 3,
+    "Prerequisites": "Riding 3D",
+    "Description": ""
+  },
+  {
+    "Perk": "Cavalry Fighter",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "After making a ranged attack, this character can draw a melee weapon as a free action. After making a melee attack, he can sheath his melee weapon as a free action."
+  },
+  {
+    "Perk": "Chain Attack: Bleed Out",
+    "Level": 4,
+    "Prerequisites": "Two-Weapon Fighting, Hand Weapon 7D",
+    "Description": "If fighting with 2 hand weapons and hit living target with both initial attacks, after resolving, make one additional reflexive attack. If hits, no damage but the target must forfeit either its next action."
+  },
+  {
+    "Perk": "Chain Attack: Body Slam",
+    "Level": 4,
+    "Prerequisites": "Two-Weapon Fighting, Unarmed Combat 7D",
+    "Description": "If you hit a living target with initial attacks from 2 melee attacks, after resolving make additional reflexive attack against target. If hits, no damage. Instead, target is knocked back 2 and knocked down."
+  },
+  {
+    "Perk": "Chain Attack: Pin Down",
+    "Level": 4,
+    "Prerequisites": "Two-Weapon Fighting, Pistol 7D",
+    "Description": "If you hit a living target with initial attacks from 2 pistols, after resolving make additional ranged reflexive attack against target. If hits, no damage. Instead, target may move 2 in any direction and knocked down."
+  },
+  {
+    "Perk": "Chain Attack: Smite",
+    "Level": 4,
+    "Prerequisites": "Two-Weapon Fighting, Great Weapon 7D",
+    "Description": "If first two char melee hand weapon attacks hit, make an additional melee attack as a reflexive. If third attack hits it does normal damage and slams the target back 1D6. Collateral slam damage is equal to weapon damage."
+  },
+  {
+    "Perk": "Charmer",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When a friendly warbeast frenzies in this character's command range, this character can choose to have the warbeast forfeit its turn instead."
+  },
+  {
+    "Perk": "Choir",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "A character gains a cumulative +1 on magic attack rolls for each other character of his faith with this ability within 2m of him."
+  },
+  {
+    "Perk": "Circular Vision",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character's front arc extends to 360'."
+  },
+  {
+    "Perk": "Cleave",
+    "Level": 3,
+    "Prerequisites": "Great Weapon 3D",
+    "Description": "When you incapacitate one or more enemies with melee attack with a Great Weapon, make one reflexive melee attack. You can make only one additional attack each turn."
+  },
+  {
+    "Perk": "Clockwork Transcendence",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The characters essence is placed in a clockwork priest vessel."
+  },
+  {
+    "Perk": "Close Shot",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character does not suffer a penalty on ranged attack rolls with a storm glaive while engaged."
+  },
+  {
+    "Perk": "Cold Steel",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character hits an enemy with a melee attack with an empowered weapon and exceeds the difficulty by at least 20, he causes that character to become stationary for one round. Characters with Immunity: Cold are not affected by Cold Steel."
+  },
+  {
+    "Perk": "Combat Caster",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "When you make a magic attack roll, reroll ones."
+  },
+  {
+    "Perk": "Combat Rider",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": ""
+  },
+  {
+    "Perk": "Communion",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Once per turn, char can use quick action to spend up to 3 soul tokens to give to a friendly steamjack within 15m. Steamjack can spend these tokens as if they were CP."
+  },
+  {
+    "Perk": "Conjoined",
+    "Level": 2,
+    "Prerequisites": "Croak Conjoined Twin",
+    "Description": "When this character becomes Fatigued, his turn does not immediately end and he can use actions the next turn, but he still cannot cast spells next turn."
+  },
+  {
+    "Perk": "Conniver",
+    "Level": 3,
+    "Prerequisites": "Persuasion 5D",
+    "Description": "The character can reroll failed Persuasion and Deception-based rolls. Each roll can be rerolled only once with Conniver."
+  },
+  {
+    "Perk": "Consume Essense",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can ritually consume a still beating heart (humanoid size or greater) for a full round. When she does so, the character gains +1 STR for one hour. A character can be affected by only one bonus due to Consume Essence at any time."
+  },
+  {
+    "Perk": "Corruptor",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Gain a CP for corrupting another character. GM determines what counts as corruption."
+  },
+  {
+    "Perk": "Counter Offer",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Character can reroll Persuasion rolls, whether failed or not. Can only reroll once as a result of Counter Offer"
+  },
+  {
+    "Perk": "Coven Leader",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character makes a Lore skill roll to perform a ritual, double bonuses from employing assistants."
+  },
+  {
+    "Perk": "Cover Identity",
+    "Level": 3,
+    "Prerequisites": "Disguise 3D",
+    "Description": "You have an established a cover identity with its own history, contacts and criminal record (or lack thereof)."
+  },
+  {
+    "Perk": "Crackshot",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When making a ranged or magic attack against a target that has concealment, cover, or elevation, this character gains +1D on the attack rolls."
+  },
+  {
+    "Perk": "Craft Rune Shot",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character can craft his own rune shot ammunition."
+  },
+  {
+    "Perk": "Croaker",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can unleash a powerful croak. This sound can be heard for up to one mile."
+  },
+  {
+    "Perk": "Crossbowman",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character can reload a Crossbow as a free action once per round."
+  },
+  {
+    "Perk": "Dark Scribe",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Can create thralls in half the time"
+  },
+  {
+    "Perk": "Deadly Skill",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "A character that is damaged by an attack made by this character cannot be healed by any means for one round."
+  },
+  {
+    "Perk": "Death Mastery",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "If a living char is destroyed within 100m of this char, the char can immediately spend a CP to animate it. Destroyed char permanently becomes a swamp shambler under this char's control."
+  },
+  {
+    "Perk": "Defender",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Once per round, when a friendly within 4m is hit with an enemy attack, immediately after the attack is resolved you can move toward the enemy character and make a melee attack as a reflexive."
+  },
+  {
+    "Perk": "Defensive Line",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "While this character is B2B with one more friendly characters, he gains +1D Parry. While the character is B2B with one or more friendly character who also have the ability, the bonus increases to +2D."
+  },
+  {
+    "Perk": "Deft",
+    "Level": 4,
+    "Prerequisites": "Skilled",
+    "Description": "Agility skills cost 1/2 CP to advance. Increase Agility skill maximums by +1D. May only be taken once."
+  },
+  {
+    "Perk": "Demolish",
+    "Level": 3,
+    "Prerequisites": "Intellect 3D",
+    "Description": "This character gains floor(Mechanikal Engineering / 3) damage rolls against constructs and structures."
+  },
+  {
+    "Perk": "Dhunia's Strike",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Use an action to pray to Dhunia. The next melee attack made by this character this turn is considered to be made with a magical weapon, and can reroll the damage roll. Damage can be rerolled only once as a result of this ability."
+  },
+  {
+    "Perk": "Dig In",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": ""
+  },
+  {
+    "Perk": "Disease Resistance",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character gains +1D to resist disease and infection."
+  },
+  {
+    "Perk": "Dismember",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character hits a living animal or beast native to the wilds of Immoren with a melee attack, he gains an additional damage die."
+  },
+  {
+    "Perk": "Dispel",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character hits an enemy with a melee attack, he can spend 1 CP to cause all upkeep spells on that enemy to immediately expire."
+  },
+  {
+    "Perk": "Divine Fortitude",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can wear Bastion plate armor."
+  },
+  {
+    "Perk": "Divine Might",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can wield two relic blades at a time."
+  },
+  {
+    "Perk": "Dodger",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When you are missed by an enemy attack, immediately move 2 after the attack is resolved unless you were missed while moving. "
+  },
+  {
+    "Perk": "Dominating Presence",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can reroll failed Social rolls. Each failed roll can be rerolled only once as a result of Dominating Presence."
+  },
+  {
+    "Perk": "Double Powder Ration",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When loaded a double powder ration is fired, the Effective range is increased by 12/30/60m. Can not be used with cartridges."
+  },
+  {
+    "Perk": "Drive: Ancillary Attack",
+    "Level": 2,
+    "Prerequisites": "Jack Marshall",
+    "Description": "Make a Moderate Tactics check and a Difficult Command check. A steamjack you control immediately makes one normal melee or ranged attack as a reflexive."
+  },
+  {
+    "Perk": "Drive: Assault",
+    "Level": 2,
+    "Prerequisites": "Jack Marshall",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll to allow a controlled warjack to combine a melee and range attack into a single charge attack. Add the Damage rating of the melee weapon (without Strength) to that of the ranged weapon. "
+  },
+  {
+    "Perk": "Drive: Off Road",
+    "Level": 2,
+    "Prerequisites": "Jack Marshall",
+    "Description": "Pass an easy Mech. Eng. test and a Moderate Command test. 'jack gains the Pathfinder ability and must use an action to charge or make a Slam power attack during its turn this round."
+  },
+  {
+    "Perk": "Drive: Pronto",
+    "Level": 2,
+    "Prerequisites": "Jack Marshall",
+    "Description": "Pass an easy Mech. Eng. test and a Moderate Command test. 'jack immediately makes a Cautious Move as a free action."
+  },
+  {
+    "Perk": "Dual Fighter",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can fight with a great weapon in each hand to double the weapon (not Strength) damage on his attack. If the character misses the attack roll by 5 or more, he suffers the damage himself."
+  },
+  {
+    "Perk": "Dual Shot (Weapon Skill)",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "You can forfeit your movement during your turn to gain +1 to attack and damage with a weapon of the specified type."
+  },
+  {
+    "Perk": "Earth Magic",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Friendly wolds gain +1D to cast their animus."
+  },
+  {
+    "Perk": "Electromancer",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character's Stormsmithing lightning strike damage rolls gain +3D."
+  },
+  {
+    "Perk": "Elemental Mastery",
+    "Level": 4,
+    "Prerequisites": "Arcane 3D",
+    "Description": "You gain +1D on your attack and damage rolls when casting an offensive spell from your elemental spell list."
+  },
+  {
+    "Perk": "Empower",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "During your turn, while you are B2B with a non-incapacitated friendly character, you can spend 1 CP to cause the friendly character to recover a wound level."
+  },
+  {
+    "Perk": "Empower Weapon",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can empower a non-mechanikal melee weapon with his arcane energy. The empowered weapon is considered to be a magical weapon while the character is armed with it."
+  },
+  {
+    "Perk": "Enigma Cipher",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Immediately gain a CP for solving a puzzle, riddle, or other complex problem. GM determines what counts."
+  },
+  {
+    "Perk": "Evasive Rider",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": ""
+  },
+  {
+    "Perk": "Expert Rider",
+    "Level": 3,
+    "Prerequisites": "Riding 5D",
+    "Description": ""
+  },
+  {
+    "Perk": "Exterminator",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character hits a living animal or beast native to the wilds of Immoren with a non-AOE ranged attack during a turn he forfeited his movement to aim, he gains +1D to his damage roll."
+  },
+  {
+    "Perk": "Eye of the Storm",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character's command over elements is such that he can now protect those around him from the fury of the storm. While operating a stormcaller and lightning rod, this character and friendly characters in his command range gain Immunity: Electicity"
+  },
+  {
+    "Perk": "Fabricator",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Reroll failed Mechanikal Engineering rolls to repair or dismantle steam-powered armor. Each roll can be rerolled only once as a result of Fabricator."
+  },
+  {
+    "Perk": "Fall Back",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "At the end of this character's turn, if he destroyed one or more enemies with ranged attacks that turn he can make a Cautious move as a free action."
+  },
+  {
+    "Perk": "Fall's Shielding Wind",
+    "Level": 2,
+    "Prerequisites": "Fall Paragon",
+    "Description": ""
+  },
+  {
+    "Perk": "Fast Caster",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Take the higher of your Perception or Arcane for Initiative in any turn in which you cast a spell."
+  },
+  {
+    "Perk": "Fast Cook",
+    "Level": 3,
+    "Prerequisites": "Alchemy 5D",
+    "Description": "You can create alchemical items in half the normal time."
+  },
+  {
+    "Perk": "Fast Draw",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Allocate dice from a declared attack roll to the Initiative roll."
+  },
+  {
+    "Perk": "Fast Rearm",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Rearm a weapon as a free action once per round."
+  },
+  {
+    "Perk": "Fast Reload",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Reload a weapon as a free action once per round."
+  },
+  {
+    "Perk": "Fate Blessed",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When a friendly character makes an attack or damage roll during his turn while in your CMD radius, you can send 1 CP to allow the friendly character to reroll that roll. Each roll can be rerolled only once due to Fate Blessed."
+  },
+  {
+    "Perk": "Fearless",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character is utterly fearless and automatically passes Willpower rolls to resist Fear."
+  },
+  {
+    "Perk": "Fearsome Howl",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Once per turn, character can take an action to unleash a terrifying howl. That turn he gains his Willpower (not incl. Perception) as a bonus to Intimidate."
+  },
+  {
+    "Perk": "Feat of Regeneration",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Available to any Trollkin character. The character may regain a limb or eye via natural healing."
+  },
+  {
+    "Perk": "Feat: Back Swing",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "All CPs spent to increase attack rolls count for 2 dice each."
+  },
+  {
+    "Perk": "Feat: Bounding Leap",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "Once during each turn if you don't run or charge, spend a CP to place yourself within 10m of your current location."
+  },
+  {
+    "Perk": "Feat: Counter Charge",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "When an enemy advances and ends movement within 12m and in LOS, spend a CP to move and attack Reflexively."
+  },
+  {
+    "Perk": "Feat: Defensive Strike",
+    "Level": 4,
+    "Prerequisites": "Skilled",
+    "Description": "When an enemy advances and ends movement in your melee range, spend a CP to make a melee attack."
+  },
+  {
+    "Perk": "Feat: Disarm",
+    "Level": 4,
+    "Prerequisites": "Skilled",
+    "Description": "After hitting an enemy with non-spray/non-AOE ranged/melee attack, spend a CP to disarm the target."
+  },
+  {
+    "Perk": "Feat: Dominator",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Spend a CP to double dice on a mind-affecting spell or effect for one round."
+  },
+  {
+    "Perk": "Feat: Flawless Timing",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "Spend a CP and name an enemy. Next time that enemy directly hits you, he misses instead."
+  },
+  {
+    "Perk": "Feat: Invulnerable",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "All CP spent to soak damage count as 2 dice."
+  },
+  {
+    "Perk": "Feat: Perfect Plot",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "Spend a feat point and character's following your plans gain +1D on non-combat rolls for the day."
+  },
+  {
+    "Perk": "Feat: Plan of Action",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "At the start of combat, spend a feat point to grant +2D to initiative and +2D to attack rolls during the first round of combat."
+  },
+  {
+    "Perk": "Feat: Powerful Caster",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Spend a CP to double the range on a spell or effect for one round."
+  },
+  {
+    "Perk": "Feat: Prescient",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "Spend a CP to win initiative and take the first turn. If two or more people use this, they make initiative rolls to see which goes first."
+  },
+  {
+    "Perk": "Feat: Quick Cast",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Spend a CP to immediately cast one non-offensive spell at the start of combat. "
+  },
+  {
+    "Perk": "Feat: Quick Thinking",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "Once per round, spend a CP to use one skill as a Reflexive at the start of another character's turn."
+  },
+  {
+    "Perk": "Feat: Revitalize",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "Spend a CP to remove two damage levels."
+  },
+  {
+    "Perk": "Feat: Shield Breaker",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "Spend a CP to destroy a shield if you hit with a melee attack."
+  },
+  {
+    "Perk": "Feat: Strength of Will",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Spend a CP to automatically pass a Willpower check."
+  },
+  {
+    "Perk": "Feat: Swashbuckler",
+    "Level": 4,
+    "Prerequisites": "Skilled",
+    "Description": "Spend a CP to treat a full Dodge as a Reflexive."
+  },
+  {
+    "Perk": "Feat: Unconventional Warfare",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "Spend a CP to turn the environment against the enemy."
+  },
+  {
+    "Perk": "Feat: Untouchable",
+    "Level": 4,
+    "Prerequisites": "Skilled",
+    "Description": "Every CP spent on Dodge gives +2D."
+  },
+  {
+    "Perk": "Feat: Vendetta",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "Spend a CP and name an enemy. Gain +1D to attack and damage dice against that enemy for the remainder of the combat."
+  },
+  {
+    "Perk": "Fell Call: Cacophony",
+    "Level": 3,
+    "Prerequisites": "Fell Calling 5D",
+    "Description": "Make a Difficult Fell Calling check. For one Round, enemies cannot cast spells, use battle plans, or use drives while within this character's command range."
+  },
+  {
+    "Perk": "Fell Call: Call of Defiance",
+    "Level": 3,
+    "Prerequisites": "Fell Calling 5D",
+    "Description": "Make a Difficult Fell Calling check. For one round, when a friendly Trollkin character makes a Tough roll while in this character's command range, on a roll of 4, 5, or 6 the Trollkin heals 1 health level and is knocked down."
+  },
+  {
+    "Perk": "Fell Call: Ground Shaker",
+    "Level": 4,
+    "Prerequisites": "Fell Calling 7D",
+    "Description": "Once per turn, this character can use this call instead of attacking. The character then makes a Range 20m, AOE 10m fell call ranged attack that causes no damage. Targets hit are knocked down."
+  },
+  {
+    "Perk": "Fell Call: Heroic Ballad",
+    "Level": 3,
+    "Prerequisites": "Fell Calling 5D",
+    "Description": "Make a Difficult Fell Calling check. For the rest of the round, while in the fell caller's command range, friendly Trollkin characters are fearless and gain +1D to melee attack rolls. Heroic Ballad lasts for one round."
+  },
+  {
+    "Perk": "Fell Call: Reverberation",
+    "Level": 3,
+    "Prerequisites": "Fell Calling 5D",
+    "Description": "Make a Difficult Fell Calling check. Make a Range 12m ranged cone attack that causes no damage. Use your Fell Calling skill for attack rolls. Enemies hit are pushed 1D meters directly away. Move the enemy farthest away first."
+  },
+  {
+    "Perk": "Fell Call: Signal Call",
+    "Level": 3,
+    "Prerequisites": "Fell Calling 3D",
+    "Description": "Make a Difficult Fell Calling check. You can unleash a call that can be heard for a number of miles equal to his Fell Calling skill."
+  },
+  {
+    "Perk": "Fell Call: Sonic Blast",
+    "Level": 3,
+    "Prerequisites": "Fell Calling 5D",
+    "Description": "Once per turn, you can use this call instead of attacking. You make a Range 16m, 5D damage cone attack. Use your POI+ Fell Calling skill for the attack roll."
+  },
+  {
+    "Perk": "Field Alchemist",
+    "Level": 3,
+    "Prerequisites": "Alchemy 3D",
+    "Description": "Create one field alchemy quick effect as a free action each round."
+  },
+  {
+    "Perk": "Field Marshal: Celestial Harmony",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Spend a CP. For one round, can channel spells through vectors in your battlegroup in your contol area."
+  },
+  {
+    "Perk": "Field Marshal: Counter Charge",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": ""
+  },
+  {
+    "Perk": "Field Marshal: Hog Wild",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll. Friendly characters that are currently in his control area can immediately make one ranged reflexive attack. Characters that make this ranged attack can make at most one melee attack during their turns."
+  },
+  {
+    "Perk": "Field Marshal: Magical Attack",
+    "Level": 3,
+    "Prerequisites": "Arcane 3D",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll. For one round, the weapons of characters in his battlegroup become magical weapons while in the warcaster's CMD radius."
+  },
+  {
+    "Perk": "Field Marshal: Poltergeist",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll. When an enemy misses a friendly character with an attack, immediately after the attack is resolved the spellcaster can choose to push the enemy 1D meters directly away from the character."
+  },
+  {
+    "Perk": "Field Marshal: Regenerate",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll during her Control Phase. Characters in the warlock's battlegroup that are currently in his control area regain a wound level."
+  },
+  {
+    "Perk": "Field Marshal: Relentless Charge",
+    "Level": 3,
+    "Prerequisites": "Arcane 3D",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll. For a round, when a friendly character begins a charge in control area, character gains the Relentless Charge ability."
+  },
+  {
+    "Perk": "Field Marshal: Shield Guard",
+    "Level": 4,
+    "Prerequisites": "Arcane 4D",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll. For one round, friendly characters gain the Shield Guard ability while in the warcaster's control area."
+  },
+  {
+    "Perk": "Field Marshal: Unyielding",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Make a Moderate Tactics roll and a Difficult Command roll during her Control Phase. While engaging an enemy, friendly characters gain +1D to soak rolls."
+  },
+  {
+    "Perk": "Find Cover",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "At the start of combat before Initiative is rolled, this character can immediately move up to 4m and take cover or go prone."
+  },
+  {
+    "Perk": "Finisher",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can spend a CP to add +2D a damage roll against a damaged target."
+  },
+  {
+    "Perk": "Fire in the Hole!",
+    "Level": 3,
+    "Prerequisites": "Thrown Weapon 3D",
+    "Description": ""
+  },
+  {
+    "Perk": "Fist of God",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character's unarmed melee combat attacks are magical. Additionally, the character gains an additional die on unarmed melee attack damage rolls against structures and constructs."
+  },
+  {
+    "Perk": "Flash Thief",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When the character successfully picks a pocket using the Pick Pocket Skill, s/he gains a CP if a second Pick Pocket check is failed."
+  },
+  {
+    "Perk": "Fleet Foot",
+    "Level": 3,
+    "Prerequisites": "Agility 3D",
+    "Description": "When this character runs, he moves at Move x 3."
+  },
+  {
+    "Perk": "Flesh of Steel",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While unarmored, character has natural armor of +2D (Phys.). This ability has no effect while this character is wearing armor."
+  },
+  {
+    "Perk": "Flying Fists",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While fighting unarmed or with a one handed weapon in the other hand, the character does +2D damage on a successul melee attack."
+  },
+  {
+    "Perk": "Focusing",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "* As an action, allocate dice from Arcane to an attack made by a Warjack under your control; dice may be allocated to attack, damage, or both.\n* As an action, allocate dice from Arcane to a soak roll when wearing Warcaster Armor.\n* As an action, allocate dice from Arcane to an attack made with a Mechanikal weapon; dice may be allocated to attack, damage, or both."
+  },
+  {
+    "Perk": "Follow Up",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Requires Bull Rush. When this Character slams an enemy while mounted, imediately after the slam is resolved this character can advance directly toward slammed char up to distance slammed"
+  },
+  {
+    "Perk": "Forager",
+    "Level": 3,
+    "Prerequisites": "Survival 5D",
+    "Description": "When this character makes a Survival skill roll to find food, he can ignore critically failures."
+  },
+  {
+    "Perk": "Free Style",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "You can improvise the ingredients of your alchemical compounds."
+  },
+  {
+    "Perk": "Gang",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "With a melee attack that targets an enemy model in the melee range of another friendly, gain +1D to melee attack and damage rolls. If one or more of those friendlies also has gang, increase to +2D."
+  },
+  {
+    "Perk": "Gatekeeper",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Enemy characters cannot gain soul tokens from characters destroyed in this character's command range."
+  },
+  {
+    "Perk": "Genius",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "Intellect skills cost 1/2 CP to advance. Increase Intellect skill maximums by +1D. May only be taken once."
+  },
+  {
+    "Perk": "Get Away",
+    "Level": 4,
+    "Prerequisites": "Dodger, Contortion 7D",
+    "Description": "When this character is missed by an enemy attack at any time other than while moving, instead of moving 4m, the character can make a full move."
+  },
+  {
+    "Perk": "Ghost Shield",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Gain +1D to soak rolls for earch soul token you currently have."
+  },
+  {
+    "Perk": "Ghost Sight",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character does not require LOS in order to target friendly characters with spells. This character ignores LOS when making magic attacks. This character ignores concealment and cover when resolving ranged attacks."
+  },
+  {
+    "Perk": "Gift of the Beast",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "During this character's first turn of a combat encounter, he can choose one of the following Mighty archetype benefits: Beat Back, Bounding Leap, Counter Charge, or Tough. The character gets that benefit for the duration of the encounter."
+  },
+  {
+    "Perk": "Girded",
+    "Level": 3,
+    "Prerequisites": "Shield 5D",
+    "Description": "While armed with a shield, this character can parry AOE attacks for himself or other characters B2B with him."
+  },
+  {
+    "Perk": "Go to Ground",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can perform a quick action to make the most of any terrain around him, no matter how seemingly sparse. Until he moves, is placed, goes prone, or is engaged, the character gains cover, gains +3D to Dodge against AOE attacks, and does not block LOS. A character cannot use the Go to Ground ability during a turn he ran."
+  },
+  {
+    "Perk": "Goad",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When a friendly warbeast destroys one or more enemy characters with a melee attack during its turn, immediately after the attack is resolved this character can force the warbeast to advance up to 4m."
+  },
+  {
+    "Perk": "Good Breeding",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character can reroll failed Cultures rolls. Each roll can be rerolled only once due to Good Breeding."
+  },
+  {
+    "Perk": "Grappler",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "An Opponent trying to break free of a grapple performed by this character suffers a -2D penalty to the roll."
+  },
+  {
+    "Perk": "Grave Man",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Gain additional die on social rolls against undead."
+  },
+  {
+    "Perk": "Great Power",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can upkeep one spell each turn without using an action."
+  },
+  {
+    "Perk": "Grenadier",
+    "Level": 3,
+    "Prerequisites": "Thrown Weapon 3D",
+    "Description": "Difficulties to dodge the character's grenade are at +5."
+  },
+  {
+    "Perk": "Gunfighter",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character can use his/her Pistol or Rifle skill in place of Parry when engaged in melee combat."
+  },
+  {
+    "Perk": "Gunner",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Reduce the character's Agility penalty from carrying a slugger by 1. The character can fire a slugger from a standing position while carrying it, without the aid of a tripod or swivel mount. "
+  },
+  {
+    "Perk": "Hack",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character gains +1D to damage rolls against knocked down targets."
+  },
+  {
+    "Perk": "Hard",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": ""
+  },
+  {
+    "Perk": "Hardened Strike",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character receives +1D to kick and punch damage. Unarmed Combat may be used to block melee weapons."
+  },
+  {
+    "Perk": "Harnessing",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "* As an action, allocate dice from Arcane to an attack made by a Warbeast under your control; dice may be allocated to attack, damage, or both.\n* As an action, allocate dice from Arcane to an attack made with a Magical weapon; dice may be allocated to attack, damage, or both.\n* As an action, make a Difficult Arcane + First Aid roll to transfer a wound level to a Warbeast."
+  },
+  {
+    "Perk": "Harry",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When an enemy character damaged by this character with a ranged or melee attack advances during the enemy character's next turn, this character can move up to 6m."
+  },
+  {
+    "Perk": "Haruspex",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Can see glimpse of the future in the entrails of freshly killed animals. "
+  },
+  {
+    "Perk": "Head-Butt",
+    "Level": 4,
+    "Prerequisites": "Strength 3D, Unarmed Combat 5D",
+    "Description": "Instead of making a normal Unarmed Combat attack, this character can spend a feat point to make a Head Butt attack."
+  },
+  {
+    "Perk": "Heart Eater",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character destroys a living character with a melee attack, he can immediately take a reflexive to rip out its heart. He can eat a heart as a action to add +1D his next melee attack or melee damage roll. Hearts spoil after one hour and lose all potency."
+  },
+  {
+    "Perk": "Heave-Ho",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Instead of making a normal Unarmed Combat attack, this character can spend a feat point to throw a smaller character as an attack."
+  },
+  {
+    "Perk": "Hidden Traps",
+    "Level": 3,
+    "Prerequisites": "Survival 3D",
+    "Description": "Other characters' difficulties to spot traps set by this character are +5."
+  },
+  {
+    "Perk": "Hit 'em Low",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When a friendly character hits a living or undead enemy character while the enemy is B2B with this character, the enemy character is Knocked Down."
+  },
+  {
+    "Perk": "Hit the Deck!",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "While prone,you do not suffer damage from AOE's unless you is directly hit by the AOE. If you are caught in an AOE that did not directly hit you, gain +3D to Dodge."
+  },
+  {
+    "Perk": "Hulking Presence",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Add an extra die to Intimidation skill rolls and use Strength as the base attribute."
+  },
+  {
+    "Perk": "Hunter",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character ignores forests, concealment, and natural cover when determining LOS or making a ranged attack."
+  },
+  {
+    "Perk": "Hunting Ground",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Choose an environment type (desert, forest, mountain, swamp) when you select this ability. This character gains +2D to Stealth and Tracking skill rolls while in the selected environment. This ability can be taken more than once. Each time this ability is selected, choose a new environment type."
+  },
+  {
+    "Perk": "Hunting Howl",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Once during each of his turns, this character can spend a quick action to unleash a terrifying howl. For the rest of his turn, he gains +2D to Intimidation rolls."
+  },
+  {
+    "Perk": "Hyper Aggressive",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When this character suffers damage from an enemy attack at any time except while he is advancing, after the attack is resolved he can immediately make a Cautious move directly toward the attacking character."
+  },
+  {
+    "Perk": "Hyper Awareness",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While in this character's command range, friendly characters gain Circular Vision."
+  },
+  {
+    "Perk": "Hyper Perception",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "Perception skills cost 1/2 CP to advance. Increase Perception skill maximums by +1D. May only be taken once."
+  },
+  {
+    "Perk": "Hyper Regeneration",
+    "Level": 4,
+    "Prerequisites": "Strength 4D",
+    "Description": "Character regains one wound level at the start of his turn."
+  },
+  {
+    "Perk": "Imbue Weapon",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Can Imbue a non-mechanikal weapon with arcane energy. Weapon is considered Magical and Blessed."
+  },
+  {
+    "Perk": "Immunity: Cold",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character is immune to Cold damage."
+  },
+  {
+    "Perk": "Immunity: Corrosion",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character is immune to Corrosion damage."
+  },
+  {
+    "Perk": "Immunity: Electricty",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character is immune to Electrical damage."
+  },
+  {
+    "Perk": "Immunity: Fire",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character is immune to Fire damage."
+  },
+  {
+    "Perk": "Imperishable Conviction",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When another friendly character of this character's faith suffers one or more wounds from an enemy attack while in this character's command range, this character regains 1 wound level. Has no effect while incapacitated."
+  },
+  {
+    "Perk": "Impervious Wall Stance",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "During his turn, this character can forfeit his movement to use Impervious Wall Stance. The character gains +5D soak and cannot be pushed or knocked down. Last for 1 round."
+  },
+  {
+    "Perk": "Inflict Pain",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character hits a warbeast with a melee attack, the warbeast must pass a Moderate Willpower check or Frenzy."
+  },
+  {
+    "Perk": "Ingenuity",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "Technical skills cost 1/2 CP to advance. Increase Technical skill maximums by +1D. May only be taken once."
+  },
+  {
+    "Perk": "Inscribe Formulae",
+    "Level": 3,
+    "Prerequisites": "Mechanical Engineering 3D",
+    "Description": "This character can Inscribe runeplates."
+  },
+  {
+    "Perk": "Inscribe Thrall Rune",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Can inscribe Thrall Runes. "
+  },
+  {
+    "Perk": "Instructor",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While within 4m, friendly characters reroll ones on occupational skills that this character also posses."
+  },
+  {
+    "Perk": "Iron Sentinel",
+    "Level": 4,
+    "Prerequisites": "Jack Marshall, Command 7D",
+    "Description": "While in B2B with one or more steamjacks you control, gains +2D soak and you cannot be knocked down."
+  },
+  {
+    "Perk": "Iron Will",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character can reroll failed Willpower rolls. Each roll can be rerolled only once due to Iron Will."
+  },
+  {
+    "Perk": "Ironhead",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Char knows how to use and control mechanically enhanced steam-powered armor, such as Man-O-War armor."
+  },
+  {
+    "Perk": "Jack Marshal",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character can instruct steamjacks to act with a successful command roll."
+  },
+  {
+    "Perk": "Jaws of the Beast",
+    "Level": 4,
+    "Prerequisites": "Strength 4D",
+    "Description": "While in beast form, this character can make one unarmed melee reflexive attack with his jaws during each of his turns. This attack uses the Unarmed Combat skill and does Strength+2D damage."
+  },
+  {
+    "Perk": "Jury Rig",
+    "Level": 3,
+    "Prerequisites": "Craft 5D",
+    "Description": "Character can take a full round to use 1 or more scrap tokens to create improvised weapons and gear. Character must spend 1 scrap token for every 10 gc of the item's cost. Creating items with scrap tokens requires a tinker's kit."
+  },
+  {
+    "Perk": "Keen Eyed",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character can increase his ranges with a bow or rifle by 4/8/12m."
+  },
+  {
+    "Perk": "Killing Spree",
+    "Level": 3,
+    "Prerequisites": "Agility 3D",
+    "Description": "When this character destroys one or more enemy characters with a melee attack during his combat action, after that attack is resolved this character can move up to 2m and make a reflexive melee attack."
+  },
+  {
+    "Perk": "Knife Thrower",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "After throwing a weapon, this character can immediately draw a weapon without using an action."
+  },
+  {
+    "Perk": "Language",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This ability can be taken several times. Each time a character takes this ability, he learns to speak, read, and write a new Language."
+  },
+  {
+    "Perk": "Legacy of Bragg",
+    "Level": 3,
+    "Prerequisites": "Legacy of Bragg",
+    "Description": "Character's fell calling difficulties are reduced to Easy."
+  },
+  {
+    "Perk": "Life Drinker",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When this character destroys a living enemy character with a melee attack, he regains a wound level."
+  },
+  {
+    "Perk": "Light Cavalry",
+    "Level": 3,
+    "Prerequisites": "Riding 5D",
+    "Description": "If the character is riding a mount not designated as a warhorse or battle mount, at the end of his turn he can advance up to 10m."
+  },
+  {
+    "Perk": "Line Breaker",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The Character gains an additional die on slam attack rolls."
+  },
+  {
+    "Perk": "Load Bearing",
+    "Level": 3,
+    "Prerequisites": "Strength 3D",
+    "Description": "Reduce the Agility penalty from the armor the character wears by 1D."
+  },
+  {
+    "Perk": "Long-Lived",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character benefits from preternatural youth and can expect to live double the normal life expectancy of his race, experiencing almost no physical or mental decline right up until the end of his days."
+  },
+  {
+    "Perk": "Lost in the Crowd",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While in a crowd, character can spend a CP to instantly vanish."
+  },
+  {
+    "Perk": "Low Breeding",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This Character suffers -2D to Cultures rolls dealing with high society, but gains +2D to skill rolls relating to social dealings with the lower classes."
+  },
+  {
+    "Perk": "Maestro",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Stormsmithng lightning strike. Increase difficulty +5. Choose one effect: Ball Lighting- AOE 6m, Big One- 6D damage, Lightning Generator- d3 consecutive characters are hit with 4D electrical damage."
+  },
+  {
+    "Perk": "Mage Killer",
+    "Level": 4,
+    "Prerequisites": "Perception 4D",
+    "Description": "This character gains an additional die on damage rolls against characters that can cast spells."
+  },
+  {
+    "Perk": "Magic Sensitivity",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Automatically sense when another character casts a spell within 3m per pip in Arcane. "
+  },
+  {
+    "Perk": "Magus",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Arcane skills cost 1/2 CP to advance. Increase Arcane skill maximums by +1D. May only be taken once."
+  },
+  {
+    "Perk": "Makeshift Engineering",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Given a day to find the parts in a town or industrialized settlement, the character can find any parts needed (or something to bodge ). The character can purchase parts, weapons, and gear at half the normal price."
+  },
+  {
+    "Perk": "Maltreatment",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Once per turn, this character can remove up to his Arcane in dice from a friendly warbeast's dice pool and add it to his own. The warbeast suffers one wound level."
+  },
+  {
+    "Perk": "Man of Iron",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Char learned to push body to the limits to compensate for failing steam-powered armor. While wearing steam-powered armor, the char never suffers the effects of internal damage."
+  },
+  {
+    "Perk": "Mark Target",
+    "Level": 3,
+    "Prerequisites": "Perception 3D",
+    "Description": "Friendly characters gain +1D on ranged attack rolls against enemy models within 10m of this character and in his LOS."
+  },
+  {
+    "Perk": "Marksman",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character can aim as a free action."
+  },
+  {
+    "Perk": "Meat Alchemy",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character makes an Alchemy skill roll to create a bone grinder fetish or an alchemical item that has animal fat, bioluminescent extract, burrow-mawg adrenal gland, mutagenic extract, or another organic ingredient, the roll is +1D."
+  },
+  {
+    "Perk": "Mother's Vengeance",
+    "Level": 4,
+    "Prerequisites": "Summer's Wrath, Agility 7D",
+    "Description": "When enemy attack incapacitates or destroys one or more friendly characters within 10m of this character, after the attack is resolved this character gains +1D Strength for one round."
+  },
+  {
+    "Perk": "Mount Attack (Animal)",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character's mounted animal can make one attack during the round."
+  },
+  {
+    "Perk": "Mounted: Counter Charge",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": ""
+  },
+  {
+    "Perk": "Natural Leader",
+    "Level": 3,
+    "Prerequisites": "Command 3D",
+    "Description": "Increase the range of battle plans by 4m."
+  },
+  {
+    "Perk": "Necromancer",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Can reroll failed Craft (Thrall) rolls. Each roll can only be rerolled once as a result of necromancer."
+  },
+  {
+    "Perk": "Night Fighter",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Reduce penalties for low-light fighting by 5."
+  },
+  {
+    "Perk": "Oath of Silence",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character cannot speak, and his command range is reduced by half. He must generally rely on the Signal Language ability to make himself understood by other characters, including any steamjacks he marshals."
+  },
+  {
+    "Perk": "Onslaught",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": ""
+  },
+  {
+    "Perk": "Opening Salvo",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": ""
+  },
+  {
+    "Perk": "Overflowing Health",
+    "Level": 4,
+    "Prerequisites": "Spring of Vitality, Survival 7D",
+    "Description": "When this character spends a CP to improve a soak or healing roll, he can immediately perform a reflexive to cause a nonincapacitated friendly character in his command range to regain one wound level."
+  },
+  {
+    "Perk": "Overpower",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Spend a CP to increase CMD radius Arcane meters for one round."
+  },
+  {
+    "Perk": "Overtake",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character destroys one or more enemies with a melee attack during his turn, after the attack is resolved he can immediately advance up to 2m."
+  },
+  {
+    "Perk": "Pack Hunter",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Friendly warbeasts in the character's CMD radius gain +1D on melee attack rolls."
+  },
+  {
+    "Perk": "Parry",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When armed with a Hand Weapon, this model cannot be targeted by free strikes."
+  },
+  {
+    "Perk": "Patch Up",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Char can repair her non-dest. armor during combat with tools. Full action and then make a Difficult ME roll. If failed, nothing happens. If passed, armor regains damage equal to the char's ME Skill, or repair one damaged sys."
+  },
+  {
+    "Perk": "Pathfinder",
+    "Level": 3,
+    "Prerequisites": "Survival 3D",
+    "Description": "Move over rough terrain without penalty."
+  },
+  {
+    "Perk": "Perfect Timing",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The Character Is automatically missed by attacks made by friendly characters."
+  },
+  {
+    "Perk": "Photographic Memory",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "You have a photographic memory."
+  },
+  {
+    "Perk": "Poison Resistance",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character gains +1D to resist poison and toxins."
+  },
+  {
+    "Perk": "Port of Call",
+    "Level": 3,
+    "Prerequisites": "Navigation 3D",
+    "Description": "A character with Port of Call can always find his way home again. "
+  },
+  {
+    "Perk": "Potent",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "Strength skills cost 1/2 CP to advance. Increase Strength skill maximums by +1D. May only be taken once."
+  },
+  {
+    "Perk": "Power of Truth",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "If the character tells only the truth during an encounter, his social rolls are +1D. The character loses this ability for the rest of the encounter after telling a lie."
+  },
+  {
+    "Perk": "Powerful Attack (Magical)",
+    "Level": 4,
+    "Prerequisites": "Arcane 4D",
+    "Description": "When attacking with a spell, this character can spend 1 CP to gain +1D to attack and damage."
+  },
+  {
+    "Perk": "Powerstrain",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Once per turn the char can use this ability, her armor immediately suffers d6 damage points and can select from effects in NQ 52."
+  },
+  {
+    "Perk": "Precision Strike",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Attack penalties for called shots are reduced by 1 die."
+  },
+  {
+    "Perk": "Press the Attack",
+    "Level": 4,
+    "Prerequisites": "Shield Slam, Shield 7D",
+    "Description": "When you slam an enemy, immediately after it is resolved you can move directly towards the slammed enemy up to any distance he was moved and then make a melee attack against that enemy."
+  },
+  {
+    "Perk": "Preternatural Awareness",
+    "Level": 4,
+    "Prerequisites": "Skilled",
+    "Description": "You gain +1D to Initiative rolls and enemies never gain back strike bonuses."
+  },
+  {
+    "Perk": "Prey",
+    "Level": 4,
+    "Prerequisites": "Military Skill 7D",
+    "Description": "This char can spend 1 CP on his turn to use. Char designates one char as his prey. This char gains +2D on attack and damage rolls against prey. This char can use only once per encounter."
+  },
+  {
+    "Perk": "Privilege",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Immune to persecution for petty crimes. Right to be executed in the style befitting a noble. +2D on social skill rolls when dealing with those beneath his station who recognize nobility."
+  },
+  {
+    "Perk": "Prowl",
+    "Level": 3,
+    "Prerequisites": "Sneak 3D",
+    "Description": "Opponent difficulties to spot the character sneaking receive a +5 penalty."
+  },
+  {
+    "Perk": "Pursuit",
+    "Level": 4,
+    "Prerequisites": "Tracking 7D",
+    "Description": "Use 1 CP. Designates one enemy. For encounter, when that enemy ends his movement you can make a Cautious move as a free action."
+  },
+  {
+    "Perk": "Quick Work",
+    "Level": 4,
+    "Prerequisites": "Agility 4D",
+    "Description": "When you kill one or more enemies with a melee attack during your combat action, immediately after that attack is resolved, make a reflexive ranged attack with a loaded weapon."
+  },
+  {
+    "Perk": "Rallying Cry",
+    "Level": 4,
+    "Prerequisites": "Command 7D",
+    "Description": "Spend a CP. For one round this character's CMD is doubled and friendly characters in his CMD, including this character, become fearless."
+  },
+  {
+    "Perk": "Ram",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this char hits an enemy with her horns, target is knocked down and can be pushed 2m directly away from this char. This char can immediately adv. directly toward target, up to distance pushed."
+  },
+  {
+    "Perk": "Reclaim",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When a Menite char is destroyed in the Reclaimer's CMD range, the Relcaimer can erect a grave marker to gain soul tokens. Char can have up to 5 soul tokens at a time and can spend them like CP. They expire at the end of the scene."
+  },
+  {
+    "Perk": "Reed in the Wind",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character cannot be targeted by free strikes."
+  },
+  {
+    "Perk": "Relentless Advance",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When another friendly character of this character's faith suffers damage from an enemy attack while in this character's command range, this character gains +4m Move for one round."
+  },
+  {
+    "Perk": "Relentless Advance",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character is damaged by an enemy attack, he gains +4m movement for one round."
+  },
+  {
+    "Perk": "Relentless Charge",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The player uses the next lower terrain bracket when charging."
+  },
+  {
+    "Perk": "Remedy",
+    "Level": 3,
+    "Prerequisites": "Medicine 3D",
+    "Description": ""
+  },
+  {
+    "Perk": "Renowned",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Within the scattered remnants of Nyss society, a warrior donning ryssovass arms commands fear, respect, and pity in equal measure. A character with this ability gains +2D on social skill rolls when dealing with other Nyss."
+  },
+  {
+    "Perk": "Resourceful",
+    "Level": 4,
+    "Prerequisites": "Mechanical Engineering 7D",
+    "Description": "This character can upkeep one spell per round on a steamjack he controls as a free action."
+  },
+  {
+    "Perk": "Restoration",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When another friendly character of this character's faith is destroyed while in this character's command range while this character is incapacitated or mortally wounded, this character is returned to Severely Wounded."
+  },
+  {
+    "Perk": "Retaliatory Strike",
+    "Level": 4,
+    "Prerequisites": "Strength 4D",
+    "Description": "When you are hit by enemy attack at any time other than his own turn, after the attack resolves you can make a reflexive melee attack against the enemy that hit you."
+  },
+  {
+    "Perk": "Return Fire",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Once per round when this character is missed by an enemy's ranged attack and while holding a loaded weapon, after the attack is resolved he can make one reflexive attack against the attacking enemy."
+  },
+  {
+    "Perk": "Rhulic 'Jack Marshal",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character is skilled at instructing steamjacks to act. Can only control Rhulic 'Jacks"
+  },
+  {
+    "Perk": "Ride-By Attack",
+    "Level": 3,
+    "Prerequisites": "Riding 5D",
+    "Description": ""
+  },
+  {
+    "Perk": "Righteous Anger",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "When one or more friendly characters are damaged by an enemy attack, gain +1D Strength for one round."
+  },
+  {
+    "Perk": "Riposte",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Once per round when this character is missed by an enemy's melee attack, Immediately after the attack is resolved he can make one reflexive attack against the attacking enemy."
+  },
+  {
+    "Perk": "Ritualist",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character can reroll failed Lore skill rolls when performing rituals. Each failed roll can be rerolled only once as a result of Ritualist."
+  },
+  {
+    "Perk": "Rock Solid",
+    "Level": 4,
+    "Prerequisites": "Strength 4D",
+    "Description": "This character and friendly characters B2B with him cannot be knocked down. The character loses this ability while he is mounted."
+  },
+  {
+    "Perk": "Rock Steady",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While wearing steam-powered armor the character cannot be knocked down, and the distance she is pushed or slammed is reduced by 2m, to a minimum of 2m."
+  },
+  {
+    "Perk": "Roll With It",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When this character would normally be knocked down, he goes prone instead. The character loses this ability while mounted."
+  },
+  {
+    "Perk": "Rune Caster",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "* As an action, allocate dice from Arcane to an attack made with a Rune Bullet; dice may be allocated to attack, damage, or both.\n* Cast a touch spell on a rune bullet. The spell affects the first object struck with the bullet."
+  },
+  {
+    "Perk": "Rune Reader",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Identify any spell cast in line of sight. Learn the type of magic cast and tradition of caster."
+  },
+  {
+    "Perk": "Runesmith",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Fire Runeshots with a ranged Warjack weapon. Roll D6 per shot on a 1 weapon is damaged."
+  },
+  {
+    "Perk": "Saddle Shot",
+    "Level": 3,
+    "Prerequisites": "Riding 3D",
+    "Description": ""
+  },
+  {
+    "Perk": "Sanguine Bond",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When another friendly character of this character's faith suffers damage from an enemy attack while in this character's command range, this character can choose to suffer any amount of that damage instead. If this character suffers all the damage the other character sufferd, the other character is no longer considered to have been damaged."
+  },
+  {
+    "Perk": "Savage Strike",
+    "Level": 4,
+    "Prerequisites": "Agility 4D",
+    "Description": "On a critical hit with an unarmed or melee weapon attack by this character, he can spend 1 CP to add an +2D to the damage roll."
+  },
+  {
+    "Perk": "Savant",
+    "Level": 4,
+    "Prerequisites": "Intellectual",
+    "Description": "Can attempt to use skills untrained at a -2D to skill roll."
+  },
+  {
+    "Perk": "Scavenger",
+    "Level": 4,
+    "Prerequisites": "Scrapper, Intellect 4D",
+    "Description": "When this character breaks down an item, he gains d3 scrap tokens."
+  },
+  {
+    "Perk": "Scent",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While riding a duskwolf, this character gains +2D on his Tracking skill rolls and can ignore LOS when declaring a charge."
+  },
+  {
+    "Perk": "Scoping It Out",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can spend 1 CP to use any time during his turn. When used friendly characters in command area gain one Dodge as a free action."
+  },
+  {
+    "Perk": "Scorched Earth",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character gains +1D on ranged AOE weapon damage rolls."
+  },
+  {
+    "Perk": "Scrabble",
+    "Level": 2,
+    "Prerequisites": "Croak",
+    "Description": "This character rerolls 1's on Climbing skill rolls."
+  },
+  {
+    "Perk": "Scrapper",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Full action to turn weapon or armor into 1 scrap token. Can have up to 1 scrap token for every D of Repair (+ME). Spend 1 scrap token to reroll a failed Repair skill roll to build or repair non-magical items."
+  },
+  {
+    "Perk": "Scrounge",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Given a day to find the parts in a town or settlement, you can find any part needed (or something close enough he can Bodge). You can purchase steamjack parts, weapons, and gear for half price."
+  },
+  {
+    "Perk": "Self-Sacrifice",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "If friendly living char in this char's CMD suffers dam, this char can spend 1 CP to take the damage instead. After the damage, this char regains one wound level if not incapacitated by the attack."
+  },
+  {
+    "Perk": "Sentry",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Once per round when an enemy is placed in or moves into the LOS of this character, this character can immediately make one reflexive attack, targeting that enemy."
+  },
+  {
+    "Perk": "Serpent Strike",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character's kick unarmed melee attacks have Reach."
+  },
+  {
+    "Perk": "Set Defense",
+    "Level": 3,
+    "Prerequisites": "Great Weapon 5D",
+    "Description": "When this character is armed with a weapon that has reach, an enemy in this character's front arc suffers -1D on charge, slam power attack, and impact attack rolls against him."
+  },
+  {
+    "Perk": "Shadow Magic",
+    "Level": 4,
+    "Prerequisites": "Gifted, Sneak 5D",
+    "Description": "When you cast a spell, no spell runes appear and magically sensitive characters cannot sense your magic"
+  },
+  {
+    "Perk": "Share the Load",
+    "Level": 2,
+    "Prerequisites": "Willpower 3D",
+    "Description": "This character can spend an action to remove Fatigue."
+  },
+  {
+    "Perk": "Shield Guard",
+    "Level": 3,
+    "Prerequisites": "Shield 3D",
+    "Description": "Once per turn, when a friendly character is directly hit while within 4m, you can choose to be directly hit instead. Cannot use if immobilized or non-corporial."
+  },
+  {
+    "Perk": "Shield Slam",
+    "Level": 4,
+    "Prerequisites": "Shield Slam 5D",
+    "Description": "When charging armed with a shield, instead of charge attack, spend CP to slam target, making attack roll with shield."
+  },
+  {
+    "Perk": "Shifting Sands Stance",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "During a turn in which the character does not move, s/he gains +1D to any dodge rolls. If an attack misses the character, s/he can move 6m in any direction."
+  },
+  {
+    "Perk": "Shootist",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character ignores the firing into melee penalty when making ranged attacks. If the character misses with a ranged attack targeting a character in melee, the attack does not have the chance to hit another combatant. The attack simply misses."
+  },
+  {
+    "Perk": "Sidestep",
+    "Level": 4,
+    "Prerequisites": "Skilled",
+    "Description": "When you hit with an enemy with a melee weapon, advance up to 4m."
+  },
+  {
+    "Perk": "Signal Howls",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While riding a duskwolf, this character gains 9m to his command range."
+  },
+  {
+    "Perk": "Signal Language",
+    "Level": 3,
+    "Prerequisites": "Cryptography 3D",
+    "Description": "You have created a coded signal language for use with your party."
+  },
+  {
+    "Perk": "Silence",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Make a Difficult Willpower roll to ignore the negative effects of Berserk."
+  },
+  {
+    "Perk": "Silver Tongued",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Gain +2D to negotiation."
+  },
+  {
+    "Perk": "Skilled Trapper",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character successfully sets a trap, add +5 to the target number to detect it."
+  },
+  {
+    "Perk": "Snacking",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can spend an action to devour any destroyed character within its melee range to immediately regain a wound level."
+  },
+  {
+    "Perk": "Snag & Slash",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When using a hooked great sword, you can pull riders from their mounts."
+  },
+  {
+    "Perk": "Snap Fire",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character destroys an enemy with a bow ranged attack during his turn, immediately after the attack has been resolved, this character can make a reflexive bow attack."
+  },
+  {
+    "Perk": "Sniper",
+    "Level": 4,
+    "Prerequisites": "Rifle 7D",
+    "Description": "When this character forfeits his movement to aim during his turn, the character's first ranged attack that turn gains +1D damage."
+  },
+  {
+    "Perk": "Snow-Wreathed",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While outdoors during his turn, this character can spend a CP to use this ability. As long as he remains outdoors, the character gains concealment for the duration of the encounter."
+  },
+  {
+    "Perk": "Souie!",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can use this ability during his turn as an action. When he uses ability, friendly warbeasts that are outside his CMD radius immediately make a Cautious Move directly toward this character."
+  },
+  {
+    "Perk": "Soul Taker",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Gain 1 soul token when a living creature destroyed in CMD area. Soul tokens can be used as CP for powering abilities, but not learning new ones. Can have a max of 3 at a time."
+  },
+  {
+    "Perk": "Soul Thief",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Try to steal a soul token from a character in CMD rng. Contested willpower roll, Fail: nothing happens, Suceed: take soul token from target. Can't have more than 3 soul tokens from ability."
+  },
+  {
+    "Perk": "Soulstorm",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While this character has one or more soul tokens, enemy characters not of the Menite faith entering or ending their turns within 4m of him immediately suffer one wound level."
+  },
+  {
+    "Perk": "Specialization",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The maximum skill level for the specified weapon is 5D."
+  },
+  {
+    "Perk": "Spirit Eater",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character gains a temporary CP from each enemy warbeasts it destroys with a melee attack. Such CPs are list at the end of the combat."
+  },
+  {
+    "Perk": "Spirit Guide",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When a living character is destroyed in this character's control area and generates a soul token, this character's controller chooses which eligible character in his control area gains the soul, regardless of the proximity of other characters."
+  },
+  {
+    "Perk": "Spring of Vitality",
+    "Level": 3,
+    "Prerequisites": "Spring Paragon",
+    "Description": ""
+  },
+  {
+    "Perk": "Sprint",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "At the end of this character's turn, if she destroyed one or more enemies with melee attacks that turn she can make a Cautious Move."
+  },
+  {
+    "Perk": "Staredown",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can make a contested Willpower roll against a living animal or beast native to the wilds of Immoren with which he locks eyes. If the beast wins, nothing happens. If this character wins, the beast cannot move toward or attack this character for one round."
+  },
+  {
+    "Perk": "Steady",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "This character cannot be knocked down. This character loses the ability while mounted."
+  },
+  {
+    "Perk": "Steam Jockey",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can put on or remove mechanically enhanced steam-powered armor as a full round action."
+  },
+  {
+    "Perk": "Steam Savant",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character's armor no longer suffers damage when she uses the Powerstrain ability."
+  },
+  {
+    "Perk": "Steamo",
+    "Level": 3,
+    "Prerequisites": "Mechanical Engineering 5D",
+    "Description": "This character can reroll failed Mechanikal Engineering rolls to repair or dismantle steamjacks. Each roll can be rerolled only once as a result of Steamo."
+  },
+  {
+    "Perk": "Stone Scavenger",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When the character scavenges the land for the materials required to construct a wold, he gathers an additional 25 gc worth of material each week for each die of the Craft (wold) skill he possesses."
+  },
+  {
+    "Perk": "Stone Warder",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can control Wold Stalkers."
+  },
+  {
+    "Perk": "Stone-and-Mortar Stance",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "During his turn, this character can forfeit his move to use Stone-and-Mortar Stance. Char gains +3D Parry and cannot be knocked down. Last for one round."
+  },
+  {
+    "Perk": "Stonecutter",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can reroll failed Craft (wold) rolls. Each failed roll can be rerolled once as a result of Stonecutter."
+  },
+  {
+    "Perk": "Storm Booster",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character is able to call upon his manipulation of the storms to supercharge nearby steamjacks. Spend a full action to give a power token to each friendly steamjack in his command range. Power tokens may be spent as CP on the warjacks and expire at the end of te combat."
+  },
+  {
+    "Perk": "Storm of Leaves",
+    "Level": 4,
+    "Prerequisites": "Fall's Shielding Wind, Command 7D",
+    "Description": "This character is no longer limited in the number of times he can use Fall's Shielding Wind each round."
+  },
+  {
+    "Perk": "Strangler",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When using a garrote on a victim, this character add +3D to damage."
+  },
+  {
+    "Perk": "Street Survivor",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Character can use Survival instead of Streetwise in an urban environment."
+  },
+  {
+    "Perk": "Sucker!",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "If you are directly hit by an enemy ranged attack, you can choose a friendly non- Incorporeal character within 4m to be hit instead. That character is automatically hit and suffers all damage and effects."
+  },
+  {
+    "Perk": "Summer's Wrath",
+    "Level": 3,
+    "Prerequisites": "Summer's Wrath",
+    "Description": "When this character disables an enemy character with a melee damage roll, he can spend 1 CP to cause enemy characters within 2m to burst into flame, taking 4D damage for 1D rounds."
+  },
+  {
+    "Perk": "Survivalist",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can reroll failed Survival rolls. Each failed roll can be rerolled only once as a result of Survivalist."
+  },
+  {
+    "Perk": "Swift Hunter",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character incapacitates an enemy with a normal ranged attack, immediately after the attack is resolved he can advance up to 4m."
+  },
+  {
+    "Perk": "Swift Rider",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "While riding a mount this character reduces the terrain difficulty by one bracket."
+  },
+  {
+    "Perk": "Take Down",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Can be used any time you incapacitate another character with an attack and while the incapacitated character is in melee range. The incapacitated character regains wound level and is bound."
+  },
+  {
+    "Perk": "Targeteer",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Penalties on the character's called shots are reduced by 1D."
+  },
+  {
+    "Perk": "Team Leader",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Character can spend CPs to assist another character's roll."
+  },
+  {
+    "Perk": "Team Player",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can join any adventuring company regardless of the qualifications of the adventuring company, and gains all of the benefits of that company."
+  },
+  {
+    "Perk": "Test the Wind",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this chararacter's artillery ranged attacks miss their targets, he can reroll the direction and/or distance of deviation. Each reroll can be made only once."
+  },
+  {
+    "Perk": "Thick Skin",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can reroll the duration of a continuous effect. Each roll can be rerolled only once per turn as a result of Thick Skin."
+  },
+  {
+    "Perk": "Tinkerer",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The time required to construct a suit of ironhead armor or to add an equipment upgrade is reduced by half."
+  },
+  {
+    "Perk": "Tinkering",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can modify her own gear and gear of characters in B2B contact. "
+  },
+  {
+    "Perk": "Torture",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "For every 2 hours character tourures someone they loose 1 pip of Strength. If subject hits 0 Strength they die. Subject gets +1 pip back for each day left alone. Subject reduced to 1 pip will say anything to end torture."
+  },
+  {
+    "Perk": "Tough",
+    "Level": 4,
+    "Prerequisites": "Mighty",
+    "Description": "When you are immobilized, roll a D6. On a 5 or 6, remove one wound level. You are no longer immobilized, but you are knocked down."
+  },
+  {
+    "Perk": "Traceless Path",
+    "Level": 3,
+    "Prerequisites": "Sneak 5D",
+    "Description": "Move at only half normal rate of speed while using this ability, either on foot or horseback, and anyone attempting to follow his trail has the character's Survival added to his difficulty."
+  },
+  {
+    "Perk": "Tracker",
+    "Level": 3,
+    "Prerequisites": "Tracking 5D",
+    "Description": "This character gains +1D to Tracking skill rolls."
+  },
+  {
+    "Perk": "Trained Rider",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character has been trained to ride a mount that is otherwise impossible to ride. Can take multiple times, each time for a new mount type."
+  },
+  {
+    "Perk": "Treewalker",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character ignores forests when determining LOS. While in a forest, this character gains +2D Dodge against melee attack rolls and can advance through obstructions and other characters if he has enough movement to move completely past them."
+  },
+  {
+    "Perk": "Trip",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When resolving a kick unarmed melee attack, the target is knocked down if the attack roll exceeds the difficulty by 10 or more."
+  },
+  {
+    "Perk": "Troll Speaker",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character understands the culture and the methods of communication of trolls and dire trolls. He can reroll failed social skill rolls when dealing with full-blood trolls and dire trolls. A roll can be rerolled only once as a result of Troll Speaker."
+  },
+  {
+    "Perk": "Truth Reader",
+    "Level": 4,
+    "Prerequisites": "Detection 7D",
+    "Description": "The character automatically knows when someone is lying to him. Keep in mind that knowing someone is lying is different from discerning the truth."
+  },
+  {
+    "Perk": "Tune Up",
+    "Level": 4,
+    "Prerequisites": "Mechanical Engineering 7D",
+    "Description": "While B2B with a steamjack he controls, this character can make a Moderate Mechanikal Engineering roll to give an adjacent steamjack +1D to attack or damage rolls for the round."
+  },
+  {
+    "Perk": "Tunneling",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "With a pick or shovel, character can tunnel through the earth. Moves at half speed and ignores other characters and attacks. Forfeit movement or action to tunnel or emerge during activation. "
+  },
+  {
+    "Perk": "Two-Weapon Fighting",
+    "Level": 3,
+    "Prerequisites": "Agility 3D",
+    "Description": "While fighting with a one handed weapon, thrown weapon, or pistol in each hand, the character gains +2D to attack or parry. On a critical failure, he takes one wound level of damage."
+  },
+  {
+    "Perk": "Unhallowed",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "While in this character's command range, friendly incorporeal characters gain +1D to soak and +2D to dodge AOE attacks."
+  },
+  {
+    "Perk": "University Education",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "The character can reroll failed Lore and Research skill rolls. Each roll can be rerolled only once due to University Education."
+  },
+  {
+    "Perk": "Urcaen's Gate",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Once per turn, the character can spend one soul token to be placed anywhere completely within 9m of his current location."
+  },
+  {
+    "Perk": "Vessel Upgrade",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Gain an upgrade to your clockwork vessel. Can be taken more than once."
+  },
+  {
+    "Perk": "Virtuoso",
+    "Level": 4,
+    "Prerequisites": "Skilled",
+    "Description": "Choose a military skill. When making a non-AOE attack with a weapon with that skill, reroll ones."
+  },
+  {
+    "Perk": "Vivisectionist",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When this character succeeds in a roll to extract alchemical ingredients from a living creature, double the amount he gains."
+  },
+  {
+    "Perk": "Warding Circle",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "Spend 15 minutes to create a warded circle."
+  },
+  {
+    "Perk": "Warlock Bond",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can bond with a warbeast. "
+  },
+  {
+    "Perk": "Warpborn",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "Must take Skinwalker form during night, can transform during the day for full action or as a free action for 1 CP. +1D STR and +2D to Search and Tracking skills rolls."
+  },
+  {
+    "Perk": "Wayfarer",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can perform the Ley Line Travel ritual and gains an additional die on Arcane + Lore skill rolls when performing that ritual. "
+  },
+  {
+    "Perk": "Waylay",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "When the character makes a stun attack, increase the target number for soak roll by 5."
+  },
+  {
+    "Perk": "Weapon Master (Weapon)",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "When resolving an attack with the specified weapon, this character does +1D damage."
+  },
+  {
+    "Perk": "Weather Vane",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Predict weather. With a sucessful Easy perception check, character can predict the next 24 hours with uncanny accuracy and can tell is the weather is being artificially manipulated."
+  },
+  {
+    "Perk": "Weatherman",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "The character can reroll failed Stormsmithing skill rolls. Each roll can only be rerolled once as a result of Weatherman."
+  },
+  {
+    "Perk": "Whelp Companion",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character immediately gains a pyg whelp companion. A pyg character who loses a limb during play can gain a whelp naturally without using this ability. A character can have up to three whelps at a time. "
+  },
+  {
+    "Perk": "Whirlwind",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": ""
+  },
+  {
+    "Perk": "Whispers of the Creator",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "Reclaimers might recive visions and directions from the creator, such as travel to a specific place, destroy an enemy, and so forth. "
+  },
+  {
+    "Perk": "Will Weaver",
+    "Level": 4,
+    "Prerequisites": "Gifted",
+    "Description": "* +1 FP at the time the benefit is taken.\n* Add Arcane to any Willpower roll to resist a spell.\n* As a Reflexive action, make a Willpower roll at (spell difficulty + 10) to counter a spell cast by another caster."
+  },
+  {
+    "Perk": "Winter's Respite",
+    "Level": 2,
+    "Prerequisites": "",
+    "Description": "During combat, this character can spend 1 CP to gain Immunity: Cold for the rest of the encounter. Friendly characters B2B with this character also gain Immunity: Cold for the rest of the encounter."
+  },
+  {
+    "Perk": "Wold Mastery",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character can heal friendly Wolds as a free action."
+  },
+  {
+    "Perk": "Wolf Protector",
+    "Level": "",
+    "Prerequisites": "",
+    "Description": "This character's duskwolf sees him as part of its pack and will protect him to the death."
+  }
+]

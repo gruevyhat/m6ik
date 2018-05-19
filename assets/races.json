@@ -1,0 +1,222 @@
+[
+  {
+    "Race": "Dwarf",
+    "Type": "Dwarf",
+    "Attributes": "+2 Strength, +1 Technical",
+    "Skills": "",
+    "Perks": "Load Bearing",
+    "Static Defenses": "",
+    "Special": "Clan connections",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Blackclad, Warlock (Farrow)",
+    "Description": "Short people from Rhul"
+  },
+  {
+    "Race": "Gobber",
+    "Type": "Gobber",
+    "Attributes": "+2 Agility, -2 Strength, +1 Technical",
+    "Skills": "",
+    "Perks": "Deft",
+    "Static Defenses": "+3 Dodge",
+    "Special": "",
+    "Proscriptions": "Gifted, Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Blackclad, Warlock (Farrow)",
+    "Description": "Diminutive humanoids from across Immoren"
+  },
+  {
+    "Race": "Human (Caspian)",
+    "Type": "Human",
+    "Attributes": "+1 Perception",
+    "Skills": "+1D Detection, +1D Persuasion",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Urban Nomad, Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Dominant ethnicity of Cygnar"
+  },
+  {
+    "Race": "Human (Idrian)",
+    "Type": "Human",
+    "Attributes": "+1 Agility",
+    "Skills": "+1D Riding",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Pugilist, Raptor, Ravager, Ryssovass, Scout (Pyg Burrower), Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Tribes from a desert region in the south of Protectorate"
+  },
+  {
+    "Race": "Human (Khard)",
+    "Type": "Human",
+    "Attributes": "+1 Strength",
+    "Skills": "+1D Riding",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Illuminated), Arcanist (Trident), Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Mist Speaker, Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Dominant Khadoran ethnicity"
+  },
+  {
+    "Race": "Human (Kossite)",
+    "Type": "Human",
+    "Attributes": "+1 Strength",
+    "Skills": "+1D Survival",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Illuminated), Arcanist (Trident), Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Mist Speaker, Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Forest dwellers from Khador"
+  },
+  {
+    "Race": "Human (Midlunder)",
+    "Type": "Human",
+    "Attributes": "+1 Strength",
+    "Skills": "+1D Craft (any)",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Urban Nomad, Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Dominant ethnicity of northern Cygnar"
+  },
+  {
+    "Race": "Human (Morridane)",
+    "Type": "Human",
+    "Attributes": "+1 Agility",
+    "Skills": "+1D Survival",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Urban Nomad, Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Reclusive swamp folk of Morrdh valley between Ord and Cygnar"
+  },
+  {
+    "Race": "Human (Ryn)",
+    "Type": "Human",
+    "Attributes": "+1 Intellect",
+    "Skills": "+1D Persuasion",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Dominant Llaelese ethnicity"
+  },
+  {
+    "Race": "Human (Scharde)",
+    "Type": "Human",
+    "Attributes": "+1 Strength",
+    "Skills": "+1D Intimidate",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "The mongrel folk of Schard Islands"
+  },
+  {
+    "Race": "Human (Skirov)",
+    "Type": "Human",
+    "Attributes": "+1 Strength",
+    "Skills": "+1D Lore (Religion), +1D Stamina",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Illuminated), Arcanist (Trident), Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Mist Speaker, Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Rustic fanatics from Khador"
+  },
+  {
+    "Race": "Human (Sulese)",
+    "Type": "Human",
+    "Attributes": "+1 Perception",
+    "Skills": "+1D Lore (Religion), +1D Willpower",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Pugilist, Raptor, Ravager, Ryssovass, Scout (Pyg Burrower), Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Dominant ethnicity of Protectorate of Menoth"
+  },
+  {
+    "Race": "Human (Thurian)",
+    "Type": "Human",
+    "Attributes": "+1 Technical",
+    "Skills": "+1D Persuasion",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Urban Nomad, Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Dominant ethnicity of western Cygnar, and southern Ord"
+  },
+  {
+    "Race": "Human (Tordoran)",
+    "Type": "Human",
+    "Attributes": "+1 Agility",
+    "Skills": "+1D Willpower, +1D Boating",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Dominant ethnicity of Ord"
+  },
+  {
+    "Race": "Human (Umbrean)",
+    "Type": "Human",
+    "Attributes": "+1 Strength",
+    "Skills": "+1D Detection",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Urban Nomad, Warcaster (Khadoran), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "A persecuted minority in both Khador and Llael"
+  },
+  {
+    "Race": "Iosan",
+    "Type": "Iosan",
+    "Attributes": "+1 Agility, +1 Arcane",
+    "Skills": "",
+    "Perks": "<any one>",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Pugilist, Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Warlock (Farrow)",
+    "Description": "Pointy-eared people from Ios"
+  },
+  {
+    "Race": "Nyss",
+    "Type": "Nyss",
+    "Attributes": "+1 Agility, +1 Strength, -1 Technical",
+    "Skills": "",
+    "Perks": "Specialization (Nyss Weapons)",
+    "Static Defenses": "",
+    "Special": "+3 Soak against cold damage, -3 Soak against fire damage",
+    "Proscriptions": "Arcane Mechanik, Arcanist, Warcaster, Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Pugilist, Ravager, Reclaimer, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Blackclad, Warlock (Farrow)",
+    "Description": "Winter elves from the far north"
+  },
+  {
+    "Race": "Ogrun",
+    "Type": "Ogrun",
+    "Attributes": "-1 Agility, -2 Perception, +2D Strength, -1 Intellect",
+    "Skills": "",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "Use 2h weapons 1h without penalty",
+    "Proscriptions": "Gifted, Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Kriel Champion, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Blackclad, Warlock (Farrow)",
+    "Description": "Hulking humanoids from across Immoren"
+  },
+  {
+    "Race": "Tharn",
+    "Type": "Tharn",
+    "Attributes": "+1 Strength, +2 Perception, +1D Strength, -1D Intellect, -1D Technical",
+    "Skills": "",
+    "Perks": "",
+    "Static Defenses": "",
+    "Special": "Transform: Males get +1D Strength and -1D Intellect/Technical; Females get +1D Agility and -1D Intellect/Technical; can transform for a full round or immediately for 1 CP.",
+    "Proscriptions": "Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Dhunian Paragon (Fall), Dhunian Paragon (Spring), Dhunian Paragon (Summer), Dhunian Paragon (Winter), Doom Reaver, Exemplar, Fell Caller, Fennblade, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Kriel Champion, Labor Korune, Long Rider, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Pugilist, Raptor, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf of Orboros, Warcaster, Arcane Mechanik, Arcanist, Blackclad, Warlock (Farrow)",
+    "Description": "Feral humans from the wilds of Immoren"
+  },
+  {
+    "Race": "Trollkin",
+    "Type": "Trollkin",
+    "Attributes": "-1 Agility, +1D Strength, -2 Technical",
+    "Skills": "",
+    "Perks": "Tough, Feat: Revitalize",
+    "Static Defenses": "",
+    "Special": "",
+    "Proscriptions": "Arcane Mechanik, Arcanist, Warcaster, Allegiant (Order of the Fist), Arcane Mechanik (Vassal of Menoth), Arcanist (Greylord), Arcanist (Illuminated), Arcanist (Trident), Assault Kommando, Bloodtracker, Bloodweaver, Bokor, Brigand (Swamp Gobber Raider), Croak Conjoined Twin, Doom Reaver, Exemplar, Field Mechanik (Rhulic), Gun Mage (Amethyst Rose), Gun Mage (Arcane Tempest), Guttersnipe, Iron Fang, Labor Korune, Mage Hunter, Man-O-War, Mist Speaker, Paladin (Order of the Wall), Priest (Cyriss), Priest (Menoth), Priest (Morrow), Priest (Nyssor), Raptor, Ravager, Reclaimer, Ryssovass, Scout (Pyg Burrower), Scrutator, Searforge Trader, Seeker, Skinwalker, Slaughterhouser, Stormblade, Stormsmith, Trencher, Urban Nomad, Warcaster (Cygnaran), Warcaster (Khadoran), Warcaster (Llaelese), Warcaster (Ordic), Warcaster (Protectorate), Warcaster (Rhulic), Warlock (Circle), Warlock (Farrow), Warlock (Swamp), Warlock (Trollkin), Wolf Rider, Wolf of Orboros, Blackclad, Warlock (Farrow)",
+    "Description": "Distant relatives of trolls from the wilds of Immoren"
+  }
+]
