@@ -60,7 +60,7 @@ type Character struct {
 	Attributes   map[string]*Die
 	AttrWeights  map[string]float64
 	Abilities    []string
-	Benefits     []string
+	Perks        []string
 	Skills       map[string]*Die
 	SkillWeights map[string]float64
 	Spells       []string
@@ -85,6 +85,12 @@ func stringifyDice(dice map[string]*Die) string {
 	return strings.Join(outString, ", ")
 }
 
+func stringifyStatDef(c Character) string {
+	return fmt.Sprintf("%s %d, %s %d, %s %d, %s %d, %s %d",
+		"Dodge", c.Dodge, "Block", c.Block, "Parry", c.Parry,
+		"Soak", c.Soak, "Sense", c.Sense)
+}
+
 func (c Character) Print() {
 	fmt.Println("Race\t" + c.Race)
 	fmt.Println("Gender\t" + c.Gender)
@@ -92,6 +98,8 @@ func (c Character) Print() {
 	fmt.Println("Archetype\t" + c.Archetype)
 	fmt.Println("Attributes\t", stringifyDice(c.Attributes))
 	fmt.Println("Skills\t", stringifyDice(c.Skills))
+	fmt.Println("Perks\t", strings.Join(c.Perks, ", "))
+	fmt.Println("Static Def.\t", stringifyStatDef(c))
 }
 
 func getMapKeys(m *map[string]Die) []string {
@@ -102,21 +110,37 @@ func getMapKeys(m *map[string]Die) []string {
 	return keys
 }
 
+func getKeys(m map[string]*Die) []string {
+	a := []string{}
+	for name := range m {
+		a = append(a, name)
+	}
+	sort.Strings(a)
+	return a
+}
+
 func (c *Character) promoteRandomAttribute(p Die) {
-	attr := randomChoice(Attributes)
-	if c.AttrWeights[attr] > 0.0 {
-		c.Attributes[attr].add(p)
+	attrs := getKeys(c.Attributes)
+	weights := []float64{}
+	for _, k := range attrs {
+		weights = append(weights, c.AttrWeights[k])
+	}
+	a := weightedRandomChoice(attrs, weights)
+	ltMax := (p.code + c.Attributes[a].code) < c.Attributes[a].codeMax
+	if c.AttrWeights[a] > 0.0 && ltMax {
+		c.Attributes[a].add(p)
 	} else {
 		c.promoteRandomAttribute(p)
 	}
 }
 
 func (c *Character) promoteRandomSkill(p Die) {
-	skills := []string{}
-	for k, _ := range c.Skills {
-		skills = append(skills, k)
+	sks := getKeys(c.Skills)
+	weights := []float64{}
+	for _, k := range sks {
+		weights = append(weights, c.SkillWeights[k])
 	}
-	sk := randomChoice(skills)
+	sk := weightedRandomChoice(sks, weights)
 	ltMax := (p.code + c.Skills[sk].code) < c.Skills[sk].codeMax
 	if c.SkillWeights[sk] > 0.0 && ltMax {
 		c.Skills[sk].add(p)
@@ -136,8 +160,8 @@ func (c *Character) generateAge() {
 
 func (c *Character) generateGender() {
 	sexes := []string{"Male", "Female", "Other"}
-	c.Gender = randomChoice(sexes)
-
+	weights := []float64{0.45, 0.45, 0.1}
+	c.Gender = weightedRandomChoice(sexes, weights)
 }
 
 func contains(arr []string, s string) bool {
@@ -182,6 +206,19 @@ func parseBonus(bonus string) (string, Die) {
 	return attr[1], Die{code: modsInt[0], pips: modsInt[1]}
 }
 
+func (c *Character) generateAttributes() {
+	c.Attributes = make(map[string]*Die)
+	c.AttrWeights = make(map[string]float64)
+	for _, attr := range Attributes {
+		if attr != "Arcane" {
+			c.Attributes[attr] = &Die{2, 0, 5}
+		} else {
+			c.Attributes[attr] = &Die{0, 0, 5}
+		}
+		c.AttrWeights[attr] = 1.0
+	}
+}
+
 func (c *Character) generateRace() {
 	// Sample.
 	races := CharDB.Races.Col("Race").Records()
@@ -214,7 +251,7 @@ func (c *Character) generateArchetype() {
 	case "Skilled":
 		attr = randomChoice([]string{"Agility", "Perception"})
 	}
-	c.AttrWeights[attr] += 1.0
+	c.AttrWeights[attr] += 5.0
 	// Handle Gifted
 	if c.Archetype != "Gifted" {
 		c.AttrWeights["Arcane"] = 0.0
@@ -259,9 +296,12 @@ func (c *Character) generateCareers() {
 	secondCareer := randomChoice(careers)
 	c.Careers = []string{firstCareer, secondCareer}
 	CharDB.Careers = dropIfNotIn(CharDB.Careers, "Career", c.Careers)
-	// TODO: Deal with career type
-	// TODO: Add Perks
-	// TODO: Set skills maximums
+	// Filter Perks
+	occPerks := []string{}
+	for i := 0; i < len(c.Careers); i++ {
+		occPerks = append(occPerks, strings.Split(CharDB.Careers.Col("Perks").Records()[i], ", ")...)
+	}
+	CharDB.Perks = dropIfNotIn(CharDB.Perks, "Perk", occPerks)
 	// TODO: Add special
 	// TODO: Add assets
 	// TODO: Add connections
@@ -299,41 +339,66 @@ func (c *Character) generateSkills() {
 	}
 }
 
+func (c *Character) getDefVal(s, a string) int {
+	p := 0
+	if _, ok := c.Skills[s]; ok {
+		p = c.Skills[s].toPips()
+	} else {
+		p = c.Attributes[a].toPips()
+	}
+	return p
+}
+
+func (c *Character) calcStaticDefenses() {
+	c.Dodge = c.Skills["Dodge"].toPips()
+	c.Block = c.getDefVal("Unarmed Combat", "Agility")
+	c.Parry = 0
+	for _, v := range []string{
+		"Hand Weapon", "Great Weapon", "Shield Weapon",
+	} {
+		if _, ok := c.Skills[v]; ok {
+			p := c.getDefVal(v, "Agility")
+			if p > c.Parry {
+				c.Parry = p
+			}
+		}
+	}
+	c.Soak = c.getDefVal("Lifting", "Strength")
+	c.Sense = c.getDefVal("Search", "Perception")
+}
+
+func (c *Character) generatePerks() {
+	perks := CharDB.Perks.Col("Perk").Records()
+	for i := 0; i < 2; i++ {
+		c.Perks = append(c.Perks, randomChoice(perks))
+	}
+}
+
 func NewCharacter() Character {
 
 	c := Character{}
 
-	// Initialize attributes.
-	c.Attributes = make(map[string]*Die)
-	c.AttrWeights = make(map[string]float64)
-	for _, attr := range Attributes {
-		if attr != "Arcane" {
-			c.Attributes[attr] = &Die{2, 0, 2}
-		} else {
-			c.Attributes[attr] = &Die{0, 0, 0}
-		}
-		c.AttrWeights[attr] = 1.0
-	}
-
-	// Add personal characteristics
-	c.generateAge()
-	c.generateGender()
-
-	// Select a Race, Archetype, and two Careers
+	// Base stats
+	c.generateAttributes()
 	c.generateRace()
 	c.generateArchetype()
 	c.generateCareers()
 
 	// Distribute 5D among Attr.
 	for i := 0; i < startingAttrD; i++ {
-		c.promoteRandomAttribute(Die{1, 0, 1})
+		c.promoteRandomAttribute(Die{code: 1})
 	}
-
-	// Distribute 12D among Skills and Perks
+	// Distribute 7D among Skills and Perks
 	c.generateSkills()
 	for i := 0; i < startingSkillD; i++ {
-		c.promoteRandomSkill(Die{1, 0, 0})
+		c.promoteRandomSkill(Die{code: 1})
 	}
+
+	// Perks
+	c.generatePerks()
+
+	// Static Defenses
+	c.calcStaticDefenses()
 
 	// Purchase equipment
 
@@ -344,9 +409,13 @@ func NewCharacter() Character {
 		c.Personality = generatePersonality()
 		c.Height = generateHeight()
 		c.Weight = generateWeight()
-		c.calcStaticDefenses()
 	*/
 
+	// Flavor
+	c.generateAge()
+	c.generateGender()
+
+	// Misc.
 	c.CharPoints = 5
 	c.FatePoints = 1
 

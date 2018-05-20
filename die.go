@@ -45,11 +45,10 @@ func (d *Die) recode() {
 	}
 }
 
-func dieToPips(d Die) int {
+func (d *Die) toPips() int {
 	return d.code*pipsPerDie + d.pips
 }
 
-func pipsToDie(p int) Die {
-	d := Die{code: int(p / pipsPerDie), pips: p % pipsPerDie}
-	return d
+func (d *Die) toDie() Die {
+	return Die{code: int(d.pips / pipsPerDie), pips: d.pips % pipsPerDie}
 }

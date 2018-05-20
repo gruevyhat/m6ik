@@ -20,25 +20,17 @@ func randomInt(min, max int) int {
 }
 
 func weightedRandomChoice(choices []string, weights []float64) string {
-	weightSum := 0.0
+	sum := 0.0
 	for _, w := range weights {
-		weightSum += w
+		sum += w
 	}
-	cumWeights := []float64{}
+	r := random.Float64() * sum
+	total := 0.0
 	for i, w := range weights {
-		if i == 0 {
-			cumWeights = append(cumWeights, w)
-		} else {
-			cumWeights = append(cumWeights, cumWeights[i-1]+w)
+		total += w
+		if r < total {
+			return choices[i]
 		}
 	}
-	r := random.Float64() * weightSum
-	var out string
-	for i, w := range weights {
-		if r < w/cumWeights[i] {
-			out = choices[i]
-			break
-		}
-	}
-	return out
+	return choices[0]
 }

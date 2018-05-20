@@ -5,8 +5,6 @@ import (
 	"github.com/kniren/gota/dataframe"
 	"github.com/kniren/gota/series"
 	"io/ioutil"
-	"log"
-	"os"
 	"strings"
 )
 
@@ -35,12 +33,10 @@ type CharacterDatabase struct {
 }
 
 type Perk struct {
-	Perk           string `json:"Perk"`
-	Cp             string `json:"CP Cost"`
-	Prerequisites  string `json:"Prerequisites"`
-	Description    string `json:"Description"`
-	Notes          string `json:"Notes"`
-	OldDescription string `json:"Old IKRPG Description"`
+	Perk          string `json:"Perk"`
+	Level         int    `json:"Level"`
+	Prerequisites string `json:"Prerequisites"`
+	Description   string `json:"Description"`
 }
 
 type Archetype struct {
@@ -72,7 +68,7 @@ type Armor struct {
 type Career struct {
 	Career              string  `json:"Career"`
 	Type                string  `json:"Type"`
-	Perks               string  `json:"Perks"`
+	Perks               string  `json:"Occupational Perks"`
 	SkillMaximums       string  `json:"Skill Maximums"`
 	Restrictions        string  `json:"Restrictions"`
 	Special             string  `json:"Special"`
@@ -82,15 +78,14 @@ type Career struct {
 }
 
 type Race struct {
-	Race           string `json:"Race"`
-	Type           string `json:"Type"`
-	Attributes     string `json:"Attributes"`
-	Skills         string `json:"Skills"`
-	Perks          string `json:"Perks"`
-	StaticDefenses string `json:"Static Defenses"`
-	Special        string `json:"Special"`
-	Proscriptions  string `json:"Proscriptions"`
-	Description    string `json:"Description"`
+	Race          string `json:"Race"`
+	Type          string `json:"Type"`
+	Attributes    string `json:"Attributes"`
+	Skills        string `json:"Skills"`
+	Perks         string `json:"Perks"`
+	Special       string `json:"Special"`
+	Proscriptions string `json:"Proscriptions"`
+	Description   string `json:"Description"`
 }
 
 type Spell struct {
@@ -117,18 +112,6 @@ type Weapon struct {
 	Special  string  `json:"Special"`
 }
 
-var charDataLog = log.New(os.Stderr, "CHARDATA: ", 11)
-
-func logger(f func(string) ([]byte, error)) func(string) []byte {
-	return func(s string) []byte {
-		out, err := f(s)
-		if err != nil {
-			charDataLog.Println(startErr, err, endErr)
-		}
-		return out
-	}
-}
-
 func readJson(filename string) []byte {
 	raw := logger(ioutil.ReadFile)(filename)
 	return raw
@@ -136,9 +119,9 @@ func readJson(filename string) []byte {
 
 func (c *CharacterDatabase) Build() {
 	// Perks
-	var abils = []Perk{}
-	json.Unmarshal(readJson(perkFile), &abils)
-	c.Perks = dataframe.LoadStructs(abils)
+	var perks = []Perk{}
+	json.Unmarshal(readJson(perkFile), &perks)
+	c.Perks = dataframe.LoadStructs(perks)
 	// Armors
 	var armors = []Armor{}
 	json.Unmarshal(readJson(armorFile), &armors)
@@ -162,7 +145,7 @@ func (c *CharacterDatabase) Build() {
 	// Spells
 	var spells = []Spell{}
 	json.Unmarshal(readJson(spellFile), &spells)
-	c.Perks = dataframe.LoadStructs(spells)
+	c.Spells = dataframe.LoadStructs(spells)
 	// Weapons
 	var weaps = []Weapon{}
 	json.Unmarshal(readJson(weaponFile), &weaps)
