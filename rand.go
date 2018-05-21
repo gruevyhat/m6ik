@@ -2,6 +2,7 @@ package chargen
 
 import (
 	"math/rand"
+	"strconv"
 	"time"
 )
 
@@ -9,6 +10,21 @@ var (
 	seed   = rand.NewSource(time.Now().Unix())
 	random = rand.New(seed)
 )
+
+func setSeed(hash string) *rand.Rand {
+	src, _ := strconv.Atoi(hash)
+	newSeed := rand.NewSource(int64(src))
+	return rand.New(newSeed)
+}
+
+func sampleWithoutReplacement(choices []string, n int) []string {
+	samples := []string{}
+	idxs := rand.Perm(len(choices))
+	for i := 0; i < n; i++ {
+		samples = append(samples, choices[idxs[i]])
+	}
+	return samples
+}
 
 func randomChoice(choices []string) string {
 	r := random.Intn(len(choices))

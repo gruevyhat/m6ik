@@ -9,9 +9,10 @@ import (
 )
 
 const (
-	startingAttrD  int = 5
-	startingSkillD int = 7
-	pipsPerDie     int = 3
+	startingAttrDice  int     = 5
+	startingSkillDice int     = 7
+	pipsPerDie        int     = 3
+	weightFactor      float64 = 10.0
 )
 
 var (
@@ -92,6 +93,7 @@ func stringifyStatDef(c Character) string {
 }
 
 func (c Character) Print() {
+	fmt.Println("Name\t" + c.Name)
 	fmt.Println("Race\t" + c.Race)
 	fmt.Println("Gender\t" + c.Gender)
 	fmt.Println("Careers\t" + strings.Join(c.Careers, "/"))
@@ -158,10 +160,14 @@ func (c *Character) generateAge() {
 	c.Age = randomInt(18, 40)
 }
 
-func (c *Character) generateGender() {
-	sexes := []string{"Male", "Female", "Other"}
-	weights := []float64{0.45, 0.45, 0.1}
-	c.Gender = weightedRandomChoice(sexes, weights)
+func (c *Character) generateGender(gender string) {
+	if gender == "" {
+		sexes := []string{"Male", "Female", "Other"}
+		weights := []float64{0.45, 0.45, 0.1}
+		c.Gender = weightedRandomChoice(sexes, weights)
+	} else {
+		c.Gender = gender
+	}
 }
 
 func contains(arr []string, s string) bool {
@@ -219,10 +225,14 @@ func (c *Character) generateAttributes() {
 	}
 }
 
-func (c *Character) generateRace() {
+func (c *Character) generateRace(race string) {
 	// Sample.
-	races := CharDB.Races.Col("Race").Records()
-	c.Race = randomChoice(races)
+	if race == "" {
+		races := CharDB.Races.Col("Race").Records()
+		c.Race = randomChoice(races)
+	} else {
+		c.Race = race
+	}
 	CharDB.filter("Races", "Race", "==", c.Race)
 	// Apply restrictions
 	raceCon := CharDB.Races.Col("Proscriptions").Records()[0]
@@ -235,10 +245,14 @@ func (c *Character) generateRace() {
 	}
 }
 
-func (c *Character) generateArchetype() {
+func (c *Character) generateArchetype(archetype string) {
 	// Sample.
-	archs := CharDB.Archetypes.Col("Archetype").Records()
-	c.Archetype = randomChoice(archs)
+	if archetype == "" {
+		archs := CharDB.Archetypes.Col("Archetype").Records()
+		c.Archetype = randomChoice(archs)
+	} else {
+		c.Archetype = archetype
+	}
 	// Weight Attribute
 	var attr string
 	switch c.Archetype {
@@ -251,7 +265,7 @@ func (c *Character) generateArchetype() {
 	case "Skilled":
 		attr = randomChoice([]string{"Agility", "Perception"})
 	}
-	c.AttrWeights[attr] += 5.0
+	c.AttrWeights[attr] += weightFactor
 	// Handle Gifted
 	if c.Archetype != "Gifted" {
 		c.AttrWeights["Arcane"] = 0.0
@@ -271,9 +285,14 @@ func (c *Character) generateArchetype() {
 	c.promoteAttribute(a, d)
 }
 
-func (c *Character) generateCareers() {
+func (c *Character) generateCareers(careerOpts string) {
 	// sample first career
-	careers := CharDB.Careers.Col("Career").Records()
+	careers := []string{}
+	if careerOpts == "" {
+		careers = CharDB.Careers.Col("Career").Records()
+	} else {
+		careers = strings.Split(careerOpts, "/")
+	}
 	firstCareer := randomChoice(careers)
 	// Deal with Gifted
 	if c.Archetype == "Gifted" {
@@ -369,28 +388,34 @@ func (c *Character) calcStaticDefenses() {
 
 func (c *Character) generatePerks() {
 	perks := CharDB.Perks.Col("Perk").Records()
-	for i := 0; i < 2; i++ {
-		c.Perks = append(c.Perks, randomChoice(perks))
+	c.Perks = sampleWithoutReplacement(perks, 2)
+}
+
+func (c *Character) generateName(name string) {
+	if name == "" {
+		c.Name = "Nameless"
+	} else {
+		c.Name = name
 	}
 }
 
-func NewCharacter() Character {
+func NewCharacter(opts map[string]string) Character {
 
 	c := Character{}
 
 	// Base stats
 	c.generateAttributes()
-	c.generateRace()
-	c.generateArchetype()
-	c.generateCareers()
+	c.generateRace(opts["race"])
+	c.generateArchetype(opts["archetype"])
+	c.generateCareers(opts["careers"])
 
 	// Distribute 5D among Attr.
-	for i := 0; i < startingAttrD; i++ {
+	for i := 0; i < startingAttrDice; i++ {
 		c.promoteRandomAttribute(Die{code: 1})
 	}
 	// Distribute 7D among Skills and Perks
 	c.generateSkills()
-	for i := 0; i < startingSkillD; i++ {
+	for i := 0; i < startingSkillDice; i++ {
 		c.promoteRandomSkill(Die{code: 1})
 	}
 
@@ -403,7 +428,6 @@ func NewCharacter() Character {
 	// Purchase equipment
 
 	/*
-		c.Name = generateName()
 		c.Quote = generateQuote()
 		c.Appearance = generateAppearance()
 		c.Personality = generatePersonality()
@@ -412,13 +436,14 @@ func NewCharacter() Character {
 	*/
 
 	// Flavor
+	c.generateName(opts["name"])
 	c.generateAge()
-	c.generateGender()
+	c.generateGender(opts["gender"])
 
 	// Misc.
 	c.CharPoints = 5
 	c.FatePoints = 1
 
-	fmt.Println(c)
+	//fmt.Println(c)
 	return c
 }

@@ -5,20 +5,33 @@ import (
 	"github.com/kniren/gota/dataframe"
 	"github.com/kniren/gota/series"
 	"io/ioutil"
+	"os"
 	"strings"
 )
 
+func getDataDir() string {
+	dir := os.Getenv("M6IK")
+	if dir != "" {
+		return dir + "/"
+	}
+	return "./"
+}
+
+var (
+	dataDir       = getDataDir()
+	perkFile      = dataDir + "assets/perks.json"
+	armorFile     = dataDir + "assets/armors.json"
+	archetypeFile = dataDir + "assets/archetypes.json"
+	careerFile    = dataDir + "assets/careers.json"
+	raceFile      = dataDir + "assets/races.json"
+	skillFile     = dataDir + "assets/skills.json"
+	spellFile     = dataDir + "assets/spells.json"
+	weaponFile    = dataDir + "assets/weapons.json"
+)
+
 const (
-	perkFile      = "assets/perks.json"
-	armorFile     = "assets/armors.json"
-	archetypeFile = "assets/archetypes.json"
-	careerFile    = "assets/careers.json"
-	raceFile      = "assets/races.json"
-	skillFile     = "assets/skills.json"
-	spellFile     = "assets/spells.json"
-	weaponFile    = "assets/weapons.json"
-	startErr      = "\033[31m"
-	endErr        = "\033[0m"
+	startErr = "\033[31m"
+	endErr   = "\033[0m"
 )
 
 type CharacterDatabase struct {
