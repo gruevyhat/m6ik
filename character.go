@@ -1,6 +1,7 @@
 package chargen
 
 import (
+	"errors"
 	"fmt"
 	"regexp"
 	"sort"
@@ -104,12 +105,32 @@ func (c Character) Print() {
 	fmt.Println("Static Def.\t", stringifyStatDef(c))
 }
 
-func getMapKeys(m *map[string]Die) []string {
-	keys := []string{}
-	for k := range *m {
-		keys = append(keys, k)
+type charJSON struct {
+	Name       string         `json:"name"`
+	Race       string         `json:"race"`
+	Gender     string         `json:"gender"`
+	Age        string         `json:"age"`
+	Careers    []string       `json:"careers"`
+	Archetype  string         `json:"archetype"`
+	Attributes []string       `json:"attributes"`
+	Skills     []string       `json:"skills"`
+	Perks      []string       `json:"perks"`
+	StaticDef  StaticDefenses `json:"statdefs"`
+}
+
+func (c Character) ToJSON() charJSON {
+	j := charJSON{
+		Name:       c.Name,
+		Race:       c.Race,
+		Gender:     c.Gender,
+		Careers:    c.Careers,
+		Archetype:  c.Archetype,
+		Attributes: strings.Split(stringifyDice(c.Attributes), ", "),
+		Skills:     strings.Split(stringifyDice(c.Skills), ", "),
+		Perks:      c.Perks,
+		StaticDef:  c.StaticDefenses,
 	}
-	return keys
+	return j
 }
 
 func getKeys(m map[string]*Die) []string {
@@ -155,9 +176,13 @@ func (c *Character) promoteAttribute(attr string, p Die) {
 	c.Attributes[attr].add(p)
 }
 
-func (c *Character) generateAge() {
+func (c *Character) generateAge(age string) {
 	// TODO: Fix for race.
-	c.Age = randomInt(18, 40)
+	if age == "" {
+		c.Age = randomInt(18, 40)
+	} else {
+		c.Age, _ = strconv.Atoi(age)
+	}
 }
 
 func (c *Character) generateGender(gender string) {
@@ -285,7 +310,7 @@ func (c *Character) generateArchetype(archetype string) {
 	c.promoteAttribute(a, d)
 }
 
-func (c *Character) generateCareers(careerOpts string) {
+func (c *Character) generateCareers(careerOpts string) error {
 	// sample first career
 	careers := []string{}
 	if careerOpts == "" {
@@ -317,14 +342,19 @@ func (c *Character) generateCareers(careerOpts string) {
 	CharDB.Careers = dropIfNotIn(CharDB.Careers, "Career", c.Careers)
 	// Filter Perks
 	occPerks := []string{}
+	perks := CharDB.Careers.Col("Perks").Records()
+	if len(perks) != len(c.Careers) {
+		return errors.New("Impossible character generated. Retrying.")
+	}
 	for i := 0; i < len(c.Careers); i++ {
-		occPerks = append(occPerks, strings.Split(CharDB.Careers.Col("Perks").Records()[i], ", ")...)
+		occPerks = append(occPerks, strings.Split(perks[i], ", ")...)
 	}
 	CharDB.Perks = dropIfNotIn(CharDB.Perks, "Perk", occPerks)
 	// TODO: Add special
 	// TODO: Add assets
 	// TODO: Add connections
 	// TODO: Add money
+	return nil
 }
 
 func parseSkillMax(skill string) (string, Die) {
@@ -407,7 +437,11 @@ func NewCharacter(opts map[string]string) Character {
 	c.generateAttributes()
 	c.generateRace(opts["race"])
 	c.generateArchetype(opts["archetype"])
-	c.generateCareers(opts["careers"])
+	err := c.generateCareers(opts["careers"])
+	if err != nil {
+		c = NewCharacter(opts)
+		return c
+	}
 
 	// Distribute 5D among Attr.
 	for i := 0; i < startingAttrDice; i++ {
@@ -425,25 +459,22 @@ func NewCharacter(opts map[string]string) Character {
 	// Static Defenses
 	c.calcStaticDefenses()
 
-	// Purchase equipment
-
+	// Flavor
+	c.generateName(opts["name"])
+	c.generateAge(opts["age"])
+	c.generateGender(opts["gender"])
 	/*
 		c.Quote = generateQuote()
 		c.Appearance = generateAppearance()
 		c.Personality = generatePersonality()
 		c.Height = generateHeight()
 		c.Weight = generateWeight()
+		c.Equipment = generateEquipment()
 	*/
-
-	// Flavor
-	c.generateName(opts["name"])
-	c.generateAge()
-	c.generateGender(opts["gender"])
 
 	// Misc.
 	c.CharPoints = 5
 	c.FatePoints = 1
 
-	//fmt.Println(c)
 	return c
 }

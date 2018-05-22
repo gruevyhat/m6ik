@@ -2,6 +2,7 @@ package chargen
 
 import (
 	"encoding/json"
+	"fmt"
 	"github.com/kniren/gota/dataframe"
 	"github.com/kniren/gota/series"
 	"io/ioutil"
@@ -11,6 +12,7 @@ import (
 
 func getDataDir() string {
 	dir := os.Getenv("M6IK")
+	fmt.Println(dir)
 	if dir != "" {
 		return dir + "/"
 	}

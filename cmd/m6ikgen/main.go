@@ -23,6 +23,7 @@ Options:
 var Opts struct {
 	Name      string `docopt:"--name"`
 	Gender    string `docopt:"--gender"`
+	Age       string `docopt:"--age"`
 	Race      string `docopt:"--race"`
 	Careers   string `docopt:"--careers"`
 	Archetype string `docopt:"--archetype"`
@@ -37,6 +38,7 @@ func main() {
 	opts := map[string]string{
 		"name":      Opts.Name,
 		"gender":    Opts.Gender,
+		"age":       Opts.Age,
 		"race":      Opts.Race,
 		"careers":   Opts.Careers,
 		"archetype": Opts.Archetype,

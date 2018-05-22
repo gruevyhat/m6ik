@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	seed   = rand.NewSource(time.Now().Unix())
+	seed   = rand.NewSource(time.Now().UnixNano())
 	random = rand.New(seed)
 )
 
