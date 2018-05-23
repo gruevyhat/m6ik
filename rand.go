@@ -19,7 +19,7 @@ func setSeed(hash string) *rand.Rand {
 
 func sampleWithoutReplacement(choices []string, n int) []string {
 	samples := []string{}
-	idxs := rand.Perm(len(choices))
+	idxs := random.Perm(len(choices))
 	for i := 0; i < n; i++ {
 		samples = append(samples, choices[idxs[i]])
 	}

@@ -24,3 +24,6 @@ run:
 deps:
 				$(GOGET) github.com/kniren/gota/dataframe
 				$(GOGET) github.com/kniren/gota/series
+install:
+				mv m6ikgen /usr/local/bin/
+				mv m6ikserv /usr/local/bin/

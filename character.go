@@ -31,11 +31,11 @@ var (
 )
 
 type StaticDefenses struct {
-	Dodge int
-	Block int
-	Parry int
-	Soak  int
-	Sense int
+	Dodge int `json:"dodge"`
+	Block int `json:"block"`
+	Parry int `json:"parry"`
+	Soak  int `json:"soak"`
+	Sense int `json:"sense"`
 }
 
 type Personal struct {
@@ -328,6 +328,9 @@ func (c *Character) generateCareers(careerOpts string) error {
 		}
 		casters := dropIfNotIn(CharDB.Careers, "Type", Casters).
 			Col("Career").Records()
+		if len(casters) == 0 {
+			return errors.New("Gifted character needs a magical career.")
+		}
 		firstCareer = randomChoice(casters)
 	}
 	// sample second career
@@ -431,6 +434,7 @@ func (c *Character) generateName(name string) {
 
 func NewCharacter(opts map[string]string) Character {
 
+	NewCharDB()
 	c := Character{}
 
 	// Base stats
@@ -439,6 +443,8 @@ func NewCharacter(opts map[string]string) Character {
 	c.generateArchetype(opts["archetype"])
 	err := c.generateCareers(opts["careers"])
 	if err != nil {
+		fmt.Println(err)
+		NewCharDB()
 		c = NewCharacter(opts)
 		return c
 	}
