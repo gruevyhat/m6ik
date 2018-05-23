@@ -373,6 +373,7 @@ func (c *Character) generateSkills() {
 	skills := strings.Split(
 		strings.Join(CharDB.Careers.Col("SkillMaximums").Records(), ", "), ", ")
 	skills = append(skills, "Dodge 4D")
+	skills = append(skills, "Search 4D")
 	for _, skill := range GeneralSkills {
 		if randomInt(0, 10) > 5 {
 			skills = append(skills, fmt.Sprintf("%s 4D", skill))
