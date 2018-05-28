@@ -220,6 +220,17 @@
     "IKRPG Skill": ""
   },
   {
+    "Skill": "Craft (Wold)",
+    "Type": "Craft",
+    "Attribute": "Technical",
+    "Skill Type": "Occupational",
+    "Social": "",
+    "Advanced": "",
+    "Prerequisites": "",
+    "Description": "Creating, fixing, or modifying material resources.",
+    "IKRPG Skill": ""
+  },
+  {
     "Skill": "Craft (Woodworking)",
     "Type": "Craft",
     "Attribute": "Technical",

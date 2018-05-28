@@ -9,7 +9,7 @@ import (
 
 var usage = `M6IK Character Generator
 
-Usage: m6ik [options]
+Usage: m6ikgen [options]
 
 Options:
   --name	The character's full name.
@@ -22,6 +22,7 @@ Options:
   -h --help
   --version
 `
+
 var Opts struct {
 	Name      string `docopt:"--name"`
 	Gender    string `docopt:"--gender"`
