@@ -1,6 +1,7 @@
 package m6ik
 
 import (
+	"fmt"
 	"hash/fnv"
 	"math/rand"
 	"strconv"
@@ -51,6 +52,7 @@ func weightedRandomChoice(choices []string, weights []float64) string {
 	total := 0.0
 	for i, w := range weights {
 		total += w
+		fmt.Println(r, total)
 		if r < total {
 			return choices[i]
 		}
