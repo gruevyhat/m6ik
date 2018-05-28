@@ -2,17 +2,20 @@ package m6ik
 
 import (
 	"encoding/json"
-	"github.com/kniren/gota/dataframe"
-	"github.com/kniren/gota/series"
 	"io/ioutil"
 	"os"
 	"strings"
+
+	"github.com/kniren/gota/dataframe"
+	"github.com/kniren/gota/series"
 )
 
 func getDataDir() string {
-	dir := os.Getenv("M6IK")
-	if dir != "" {
+	var dir string
+	if dir = os.Getenv("M6IK"); dir != "" {
 		return dir + "/"
+	} else if dir = os.Getenv("GOPATH"); dir != "" {
+		return dir + "/src/github.com/gruevyhat/m6ik/"
 	}
 	return "./"
 }
