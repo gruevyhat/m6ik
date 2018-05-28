@@ -256,9 +256,9 @@ func (c *Character) generateAttributes() {
 	c.AttrWeights = make(map[string]float64)
 	for _, attr := range Attributes {
 		if attr == "Arcane" {
-			c.Attributes[attr] = &Die{0, 0, 5}
+			c.Attributes[attr] = &Die{0, 0, 4}
 		} else {
-			c.Attributes[attr] = &Die{2, 0, 5}
+			c.Attributes[attr] = &Die{2, 0, 4}
 		}
 		c.AttrWeights[attr] = 1.0
 	}
@@ -280,6 +280,7 @@ func (c *Character) generateRace(race string) {
 	raceAttr := strings.Split(CharDB.Races.Col("Attributes").Records()[0], ", ")
 	for _, r := range raceAttr {
 		a, d := parseBonus(r)
+		d.codeMax += d.code
 		c.promoteAttribute(a, d)
 	}
 }
