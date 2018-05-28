@@ -1,4 +1,4 @@
-package chargen
+package m6ik
 
 import (
 	"encoding/json"

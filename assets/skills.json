@@ -376,7 +376,7 @@
   {
     "Skill": "Great Weapon",
     "Type": "Great Weapon",
-    "Attribute": "Strength",
+    "Attribute": "Agility",
     "Skill Type": "Military",
     "Social": "",
     "Advanced": "",
@@ -442,7 +442,7 @@
   {
     "Skill": "Lance",
     "Type": "Lance",
-    "Attribute": "Strength",
+    "Attribute": "Agility",
     "Skill Type": "Military",
     "Social": "",
     "Advanced": "",
