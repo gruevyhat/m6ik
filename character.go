@@ -178,7 +178,7 @@ func (c *Character) promoteRandomSkill(p Die) {
 		weights = append(weights, c.SkillWeights[k])
 	}
 	sk := weightedRandomChoice(sks, weights)
-	lessThanMax := p.toPips()+c.Skills[sk].toPips() <= c.Skills[sk].codeMax*pipsPerDie
+	lessThanMax := p.toPips()+c.Skills[sk].toPips() <= c.Skills[sk].codeMax*pipsPerDie+2
 	if c.SkillWeights[sk] > 0.0 && lessThanMax {
 		c.Skills[sk].add(p)
 	} else {
