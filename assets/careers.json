@@ -354,7 +354,7 @@
   {
     "Career": "Exemplar",
     "Type": "Exemplar",
-    "Occupational Perks": "Aegis, Chain Attack: Smite, Divine Fortitude, Imperishable Conviction, Iron Will, Load Bearing, Precision Strike, Relentless Advance, Restoration, Sanguine Bond, two-Weapon Fighting",
+    "Occupational Perks": "Aegis, Chain Attack: Smite, Divine Fortitude, Imperishable Conviction, Iron Will, Load Bearing, Precision Strike, Relentless Advance, Restoration, Sanguine two-Weapon Fighting",
     "Skill Maximums": "Command 4D, Medicine 2D, Navigation 2D, Survival 2D, Crossbow 3D, Great Weapon 4D, Hand Weapon 4D, Lance 4D, Shield 3D, Unarmed Combat 3D",
     "Restrictions": "Man-at-Arms, Military Officer, Ranger, Soldier, Warcaster, Warcaster (Protectorate)",
     "Special": "",
@@ -1069,7 +1069,7 @@
   {
     "Career": "Warcaster (Cygnaran)",
     "Type": "Warcaster",
-    "Occupational Perks": "Bond, Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
+    "Occupational Perks": "Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
     "Skill Maximums": "Command 4D, Tactics 3D, Great Weapon 3D, Hand Weapon 3D, Pistol 3D, Unarmed Combat 2D, Spellcraft (Ignem) 4D, Spellcraft (Terram) 4D",
     "Restrictions": "Arcane Mechanik, Arcanist, Field Mechanik, Knight, Mant-at-Arms, Sorcerer (Fire), Sorcerer (Ice), Sorcerer (Stone), Sorcerer (Storm), Stormblade, Trencher, Gun Mage, Gun Mage (Arcane Tempest), Aristocrat, Horseman, Military Officer, Pistoleer, Ranger, Rifleman, Soldier",
     "Special": "Focusing",
@@ -1091,7 +1091,7 @@
   {
     "Career": "Warcaster (Khadoran)",
     "Type": "Warcaster",
-    "Occupational Perks": "Bond, Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
+    "Occupational Perks": "Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
     "Skill Maximums": "Command 4D, Tactics 4D, Great Weapon 3D, Hand Weapon 3D, Pistol 3D, Unarmed Combat 2D, Spellcraft (Ignem) 4D, Spellcraft (Terram) 4D",
     "Restrictions": "Arcanist (Greylord), Alchemist, Arcane Mechanik, Aristocrat, Explorer, Horseman, Investigator, Military Officer, Sorcerer (Fire), Sorcerer (Ice), Sorcerer (Stone), Sorcerer (Storm), Spy, Assault Kommando, Iron Fang, Soldier",
     "Special": "Focusing",
@@ -1102,7 +1102,7 @@
   {
     "Career": "Warcaster (Llaelese)",
     "Type": "Warcaster",
-    "Occupational Perks": "Bond, Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
+    "Occupational Perks": "Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
     "Skill Maximums": "Command 4D, Tactics 4D, Great Weapon 3D, Hand Weapon 3D, Pistol 3D, Unarmed Combat 2D, Spellcraft (Ignem) 4D, Spellcraft (Terram) 4D",
     "Restrictions": "",
     "Special": "Focusing",
@@ -1113,7 +1113,7 @@
   {
     "Career": "Warcaster (Ordic)",
     "Type": "Warcaster",
-    "Occupational Perks": "Bond, Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
+    "Occupational Perks": "Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
     "Skill Maximums": "Command 4D, Tactics 4D, Great Weapon 3D, Hand Weapon 3D, Pistol 3D, Unarmed Combat 2D, Spellcraft (Ignem) 4D, Spellcraft (Terram) 4D",
     "Restrictions": "Arcane Mechanik, Arcanist, Aristocrat, Artillerist, Duelist, Explorer, Field Mechanik, Horseman, Man-at-Arms, Military Officer, Pirate, Priest (Morrow), Soldier, Soldier (Marine), Sorcerer (Fire), Sorcerer (Ice), Sorcerer (Stone), Sorcerer (Storm)",
     "Special": "Focusing",
@@ -1124,7 +1124,7 @@
   {
     "Career": "Warcaster (Protectorate)",
     "Type": "Warcaster",
-    "Occupational Perks": "Bond, Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
+    "Occupational Perks": "Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
     "Skill Maximums": "Command 4D, Tactics 4D, Great Weapon 3D, Hand Weapon 3D, Pistol 3D, Unarmed Combat 2D, Spellcraft (Ignem) 4D, Spellcraft (Terram) 4D",
     "Restrictions": "Allegiant (Order of the Fist), Cutthroat, Duelist, Exemplar, Field Mechanik, Paladin (Order of the Wall), Priest (Menoth), Reclaimer, Scrutator",
     "Special": "Focusing",
@@ -1135,7 +1135,7 @@
   {
     "Career": "Warcaster (Rhulic)",
     "Type": "Warcaster",
-    "Occupational Perks": "Bond, Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader, Rhulic Warcaster",
+    "Occupational Perks": "Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader, Rhulic Warcaster",
     "Skill Maximums": "Command 4D, Tactics 4D, Great Weapon 3D, Hand Weapon 3D, Pistol 3D, Unarmed Combat 2D, Spellcraft (Ignem) 4D, Spellcraft (Terram) 4D",
     "Restrictions": "",
     "Special": "Focusing",
@@ -1146,7 +1146,7 @@
   {
     "Career": "Warcaster",
     "Type": "Warcaster",
-    "Occupational Perks": "Bond, Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
+    "Occupational Perks": "Field Marshal: Magical Attack, Field Marshal: Relentless Charge, Field Marshal: Shield Guard, Natural Leader",
     "Skill Maximums": "Command 4D, Tactics 4D, Great Weapon 3D, Hand Weapon 3D, Pistol 3D, Unarmed Combat 2D, Spellcraft (Ignem) 4D, Spellcraft (Terram) 4D",
     "Restrictions": "",
     "Special": "Focusing",
@@ -1157,7 +1157,7 @@
   {
     "Career": "Warlock (Circle)",
     "Type": "Warlock",
-    "Occupational Perks": "Beast Handler, Calm, Earth Magic, Empower Weapon, Field Marshal: Magical Weapon, Field Marshal: Relentless Charge, Pack Hunter, Pathfinder, Resonance: Devourer Warbeast, Resonance: Wold, Stone Warder, Warlock Bond, Wold Mastery",
+    "Occupational Perks": "Beast Handler, Calm, Earth Magic, Empower Weapon, Field Marshal: Magical Weapon, Field Marshal: Relentless Charge, Pack Hunter, Pathfinder, Resonance: Devourer Warbeast, Resonance: Wold, Stone Warder, Warlock Wold Mastery",
     "Skill Maximums": "Command 3D, Stealth 3D, Survival 3D, Great Weapon 3D, Hand Weapon 3D, Unarmed Combat 3D, Spellcraft (Animal) 4D, Spellcraft (Ignem) 4D",
     "Restrictions": "",
     "Special": "Harnessing",

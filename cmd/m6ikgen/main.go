@@ -16,6 +16,7 @@ Options:
   --race	The race and ethnicity.
   --archetype	Mighty, Skilled, Intellectual, or Gifted.  
   --careers	Slash-delimited career list (e.g., Soldier/Spy).
+  --n_perks	Number of random perks to assign.
   --hash	Character generation signature.
   -h --help
   --version
@@ -27,6 +28,7 @@ var Opts struct {
 	Race      string `docopt:"--race"`
 	Careers   string `docopt:"--careers"`
 	Archetype string `docopt:"--archetype"`
+	NPerks    string `docopt:"--n_perks"`
 	Hash      string `docopt:"--hash"`
 }
 
@@ -42,10 +44,10 @@ func main() {
 		"race":      Opts.Race,
 		"careers":   Opts.Careers,
 		"archetype": Opts.Archetype,
+		"n_perks":   Opts.NPerks,
 		"hash":      Opts.Hash,
 	}
 
 	c := NewCharacter(opts)
 	c.Print()
-
 }

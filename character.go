@@ -13,7 +13,7 @@ const (
 	startingAttrDice  int     = 5
 	startingSkillDice int     = 7
 	pipsPerDie        int     = 3
-	weightFactor      float64 = 10.0
+	weightFactor      float64 = 3.0
 )
 
 var (
@@ -55,7 +55,6 @@ type Experience struct {
 }
 
 type Character struct {
-	Personal
 	Race         string
 	Archetype    string
 	Careers      []string
@@ -68,6 +67,7 @@ type Character struct {
 	Spells       []string
 	Weapons      []string
 	Armors       []string
+	Personal
 	StaticDefenses
 	Experience
 }
@@ -87,10 +87,19 @@ func stringifyDice(dice map[string]*Die) string {
 	return strings.Join(outString, ", ")
 }
 
-func stringifyStatDef(c Character) string {
+func stringifyStatDef(sd StaticDefenses) string {
 	return fmt.Sprintf("%s %d, %s %d, %s %d, %s %d, %s %d",
-		"Dodge", c.Dodge, "Block", c.Block, "Parry", c.Parry,
-		"Soak", c.Soak, "Sense", c.Sense)
+		"Dodge", sd.Dodge, "Block", sd.Block, "Parry", sd.Parry,
+		"Soak", sd.Soak, "Sense", sd.Sense)
+}
+
+func stringifyPerks(perks []string) map[string]string {
+	perkMap := map[string]string{}
+	for _, p := range perks {
+		perkMap[p] = filterDf(CharDB.Perks, "Perk", "==", p).
+			Col("Description").Records()[0]
+	}
+	return perkMap
 }
 
 func (c Character) Print() {
@@ -102,32 +111,33 @@ func (c Character) Print() {
 	fmt.Println("Attributes\t", stringifyDice(c.Attributes))
 	fmt.Println("Skills\t", stringifyDice(c.Skills))
 	fmt.Println("Perks\t", strings.Join(c.Perks, ", "))
-	fmt.Println("Static Def.\t", stringifyStatDef(c))
+	fmt.Println("Static Def.\t", stringifyStatDef(c.StaticDefenses))
 }
 
 type charJSON struct {
-	Name       string         `json:"name"`
-	Race       string         `json:"race"`
-	Gender     string         `json:"gender"`
-	Age        string         `json:"age"`
-	Careers    []string       `json:"careers"`
-	Archetype  string         `json:"archetype"`
-	Attributes []string       `json:"attributes"`
-	Skills     []string       `json:"skills"`
-	Perks      []string       `json:"perks"`
-	StaticDef  StaticDefenses `json:"statdefs"`
+	Name       string            `json:"name"`
+	Race       string            `json:"race"`
+	Gender     string            `json:"gender"`
+	Age        int               `json:"age"`
+	Careers    []string          `json:"careers"`
+	Archetype  string            `json:"archetype"`
+	Attributes []string          `json:"attributes"`
+	Skills     []string          `json:"skills"`
+	Perks      map[string]string `json:"perks"`
+	StaticDef  StaticDefenses    `json:"statdefs"`
 }
 
 func (c Character) ToJSON() charJSON {
 	j := charJSON{
 		Name:       c.Name,
+		Age:        c.Age,
 		Race:       c.Race,
 		Gender:     c.Gender,
 		Careers:    c.Careers,
 		Archetype:  c.Archetype,
 		Attributes: strings.Split(stringifyDice(c.Attributes), ", "),
 		Skills:     strings.Split(stringifyDice(c.Skills), ", "),
-		Perks:      c.Perks,
+		Perks:      stringifyPerks(c.Perks),
 		StaticDef:  c.StaticDefenses,
 	}
 	return j
@@ -149,8 +159,8 @@ func (c *Character) promoteRandomAttribute(p Die) {
 		weights = append(weights, c.AttrWeights[k])
 	}
 	a := weightedRandomChoice(attrs, weights)
-	ltMax := (p.code + c.Attributes[a].code) < c.Attributes[a].codeMax
-	if c.AttrWeights[a] > 0.0 && ltMax {
+	lessThanMax := p.toPips()+c.Attributes[a].toPips() <= c.Attributes[a].codeMax*pipsPerDie
+	if c.AttrWeights[a] > 0.0 && lessThanMax {
 		c.Attributes[a].add(p)
 	} else {
 		c.promoteRandomAttribute(p)
@@ -164,8 +174,8 @@ func (c *Character) promoteRandomSkill(p Die) {
 		weights = append(weights, c.SkillWeights[k])
 	}
 	sk := weightedRandomChoice(sks, weights)
-	ltMax := (p.code + c.Skills[sk].code) < c.Skills[sk].codeMax
-	if c.SkillWeights[sk] > 0.0 && ltMax {
+	lessThanMax := p.toPips()+c.Skills[sk].toPips() <= c.Skills[sk].codeMax*pipsPerDie
+	if c.SkillWeights[sk] > 0.0 && lessThanMax {
 		c.Skills[sk].add(p)
 	} else {
 		c.promoteRandomSkill(p)
@@ -179,7 +189,7 @@ func (c *Character) promoteAttribute(attr string, p Die) {
 func (c *Character) generateAge(age string) {
 	// TODO: Fix for race.
 	if age == "" {
-		c.Age = randomInt(18, 40)
+		c.Age = randomInt(15, 35)
 	} else {
 		c.Age, _ = strconv.Atoi(age)
 	}
@@ -197,7 +207,7 @@ func (c *Character) generateGender(gender string) {
 
 func contains(arr []string, s string) bool {
 	for _, a := range arr {
-		if a == s || strings.HasPrefix(a, s) || strings.HasPrefix(s, a) {
+		if a == s { // || strings.HasPrefix(a, s) || strings.HasPrefix(s, a) {
 			return true
 		}
 	}
@@ -241,10 +251,10 @@ func (c *Character) generateAttributes() {
 	c.Attributes = make(map[string]*Die)
 	c.AttrWeights = make(map[string]float64)
 	for _, attr := range Attributes {
-		if attr != "Arcane" {
-			c.Attributes[attr] = &Die{2, 0, 5}
-		} else {
+		if attr == "Arcane" {
 			c.Attributes[attr] = &Die{0, 0, 5}
+		} else {
+			c.Attributes[attr] = &Die{2, 0, 5}
 		}
 		c.AttrWeights[attr] = 1.0
 	}
@@ -311,36 +321,42 @@ func (c *Character) generateArchetype(archetype string) {
 }
 
 func (c *Character) generateCareers(careerOpts string) error {
-	// sample first career
 	careers := []string{}
+	var (
+		firstCareer, secondCareer string
+	)
 	if careerOpts == "" {
 		careers = CharDB.Careers.Col("Career").Records()
-	} else {
-		careers = strings.Split(careerOpts, "/")
-	}
-	firstCareer := randomChoice(careers)
-	// Deal with Gifted
-	if c.Archetype == "Gifted" {
-		for _, car := range Casters {
-			if !contains(careers, car) {
-				Casters = remove(car, Casters)
+		// sample first career
+		firstCareer = randomChoice(careers)
+		// Deal with Gifted
+		if c.Archetype == "Gifted" {
+			for _, car := range Casters {
+				if !contains(careers, car) {
+					Casters = remove(car, Casters)
+				}
 			}
+			casters := dropIfNotIn(CharDB.Careers, "Type", Casters).
+				Col("Career").Records()
+			if len(casters) == 0 {
+				return errors.New("Gifted character needs a magical career.")
+			}
+			firstCareer = randomChoice(casters)
 		}
-		casters := dropIfNotIn(CharDB.Careers, "Type", Casters).
-			Col("Career").Records()
-		if len(casters) == 0 {
-			return errors.New("Gifted character needs a magical career.")
+		// sample second career
+		carRestr := filterDf(CharDB.Careers, "Career", "==", firstCareer).
+			Col("Restrictions").Records()[0]
+		if carRestr != "" {
+			carRestrSplit := strings.Split(carRestr, ", ")
+			careers = dropIfNotIn(CharDB.Careers, "Career", carRestrSplit).Col("Career").Records()
 		}
-		firstCareer = randomChoice(casters)
+		secondCareer = randomChoice(careers)
+	} else {
+		// Handle specified parameters
+		careers = strings.Split(careerOpts, "/")
+		firstCareer, secondCareer = careers[0], careers[1]
 	}
-	// sample second career
-	carRestr := filterDf(CharDB.Careers, "Career", "==", firstCareer).
-		Col("Restrictions").Records()[0]
-	if carRestr != "" {
-		carRestrSplit := strings.Split(carRestr, ", ")
-		careers = dropIfNotIn(CharDB.Careers, "Career", carRestrSplit).Col("Career").Records()
-	}
-	secondCareer := randomChoice(careers)
+	// Assign careers and filter db
 	c.Careers = []string{firstCareer, secondCareer}
 	CharDB.Careers = dropIfNotIn(CharDB.Careers, "Career", c.Careers)
 	// Filter Perks
@@ -402,7 +418,7 @@ func (c *Character) getDefVal(s, a string) int {
 	return p
 }
 
-func (c *Character) calcStaticDefenses() {
+func (c *Character) generateStaticDefenses() {
 	c.Dodge = c.Skills["Dodge"].toPips()
 	c.Block = c.getDefVal("Unarmed Combat", "Agility")
 	c.Parry = 0
@@ -420,9 +436,13 @@ func (c *Character) calcStaticDefenses() {
 	c.Sense = c.getDefVal("Search", "Perception")
 }
 
-func (c *Character) generatePerks() {
+func (c *Character) generatePerks(n_perks string) {
+	n, _ := strconv.Atoi(n_perks)
+	if n == 0 {
+		n = 2
+	}
 	perks := CharDB.Perks.Col("Perk").Records()
-	c.Perks = sampleWithoutReplacement(perks, 2)
+	c.Perks = sampleWithoutReplacement(perks, n)
 }
 
 func (c *Character) generateName(name string) {
@@ -461,10 +481,10 @@ func NewCharacter(opts map[string]string) Character {
 	}
 
 	// Perks
-	c.generatePerks()
+	c.generatePerks(opts["n_perks"])
 
 	// Static Defenses
-	c.calcStaticDefenses()
+	c.generateStaticDefenses()
 
 	// Flavor
 	c.generateName(opts["name"])

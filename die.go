@@ -39,10 +39,9 @@ func (d *Die) add(e Die) {
 }
 
 func (d *Die) recode() {
-	if d.pips >= 3 {
-		d.code = d.code + d.pips/pipsPerDie
-		d.pips = d.pips % pipsPerDie
-	}
+	p := d.toPips()
+	d.code = p / pipsPerDie
+	d.pips = p % pipsPerDie
 }
 
 func (d *Die) toPips() int {
