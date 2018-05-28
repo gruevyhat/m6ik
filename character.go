@@ -67,6 +67,7 @@ type Character struct {
 	Spells       []string
 	Weapons      []string
 	Armors       []string
+	Seed         string
 	Personal
 	StaticDefenses
 	Experience
@@ -112,6 +113,7 @@ func (c Character) Print() {
 	fmt.Println("Skills\t", stringifyDice(c.Skills))
 	fmt.Println("Perks\t", strings.Join(c.Perks, ", "))
 	fmt.Println("Static Def.\t", stringifyStatDef(c.StaticDefenses))
+	fmt.Println("Random Seed\t", c.Seed)
 }
 
 type charJSON struct {
@@ -125,6 +127,7 @@ type charJSON struct {
 	Skills     []string          `json:"skills"`
 	Perks      map[string]string `json:"perks"`
 	StaticDef  StaticDefenses    `json:"statdefs"`
+	Seed       string            `json:"seed"`
 }
 
 func (c Character) ToJSON() charJSON {
@@ -139,6 +142,7 @@ func (c Character) ToJSON() charJSON {
 		Skills:     strings.Split(stringifyDice(c.Skills), ", "),
 		Perks:      stringifyPerks(c.Perks),
 		StaticDef:  c.StaticDefenses,
+		Seed:       c.Seed,
 	}
 	return j
 }
@@ -457,6 +461,14 @@ func NewCharacter(opts map[string]string) Character {
 
 	NewCharDB()
 	c := Character{}
+
+	// Set seed
+	if opts["seed"] == "" {
+		c.Seed = seed
+	} else {
+		c.Seed = opts["seed"]
+		random = setSeed(c.Seed)
+	}
 
 	// Base stats
 	c.generateAttributes()

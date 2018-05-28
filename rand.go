@@ -1,21 +1,28 @@
 package m6ik
 
 import (
+	"hash/fnv"
 	"math/rand"
 	"strconv"
 	"time"
 )
 
-var (
-	seed   = rand.NewSource(time.Now().UnixNano())
-	random = rand.New(seed)
-)
+func hash(s string) uint32 {
+	h := fnv.New32a()
+	h.Write([]byte(s))
+	return h.Sum32()
+}
 
-func setSeed(hash string) *rand.Rand {
-	src, _ := strconv.Atoi(hash)
-	newSeed := rand.NewSource(int64(src))
+func setSeed(seed string) *rand.Rand {
+	h := int64(hash(seed))
+	newSeed := rand.NewSource(h)
 	return rand.New(newSeed)
 }
+
+var (
+	seed   = strconv.FormatInt(time.Now().UTC().UnixNano(), 16)
+	random = setSeed(seed)
+)
 
 func sampleWithoutReplacement(choices []string, n int) []string {
 	samples := []string{}

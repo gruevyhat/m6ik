@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/docopt/docopt-go"
-	. "github.com/gruevyhat/m6ik"
 	"os"
+
+	"github.com/docopt/docopt-go"
+	"github.com/gruevyhat/m6ik"
 )
 
 var usage = `M6IK Character Generator
@@ -17,7 +18,7 @@ Options:
   --archetype	Mighty, Skilled, Intellectual, or Gifted.  
   --careers	Slash-delimited career list (e.g., Soldier/Spy).
   --n_perks	Number of random perks to assign.
-  --hash	Character generation signature.
+  --seed	Character generation signature.
   -h --help
   --version
 `
@@ -29,7 +30,7 @@ var Opts struct {
 	Careers   string `docopt:"--careers"`
 	Archetype string `docopt:"--archetype"`
 	NPerks    string `docopt:"--n_perks"`
-	Hash      string `docopt:"--hash"`
+	Seed      string `docopt:"--seed"`
 }
 
 func main() {
@@ -45,9 +46,9 @@ func main() {
 		"careers":   Opts.Careers,
 		"archetype": Opts.Archetype,
 		"n_perks":   Opts.NPerks,
-		"hash":      Opts.Hash,
+		"seed":      Opts.Seed,
 	}
 
-	c := NewCharacter(opts)
+	c := m6ik.NewCharacter(opts)
 	c.Print()
 }

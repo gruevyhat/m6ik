@@ -9,7 +9,7 @@ import (
 
 type opt map[string]string
 
-func TestNewCharacter(t *testing.T) {
+func TestNewCharacterParams(t *testing.T) {
 	opts := []opt{
 		opt{
 			"name":      "Rasputin",
@@ -19,7 +19,7 @@ func TestNewCharacter(t *testing.T) {
 			"careers":   "Arcanist (Greylord)/Soldier",
 			"archetype": "Gifted",
 			"n_perks":   "2",
-			"hash":      "",
+			"seed":      "",
 		},
 		opt{
 			"name":      "Borkenhekenaken",
@@ -29,7 +29,7 @@ func TestNewCharacter(t *testing.T) {
 			"careers":   "Spy/Thief",
 			"archetype": "Skilled",
 			"n_perks":   "2",
-			"hash":      "",
+			"seed":      "",
 		},
 		opt{
 			"name":      "Xev",
@@ -39,7 +39,7 @@ func TestNewCharacter(t *testing.T) {
 			"careers":   "Knight/Stormblade",
 			"archetype": "Intellectual",
 			"n_perks":   "2",
-			"hash":      "",
+			"seed":      "",
 		},
 	}
 	for _, o := range opts {
@@ -63,4 +63,21 @@ func TestNewCharacter(t *testing.T) {
 			t.Errorf("Incorrect careers. Expected '%s'. Found '%s'.", c.Careers, o["careers"])
 		}
 	}
+}
+
+func TestNewCharacterRandom(t *testing.T) {
+	o := opt{
+		"name": "", "gender": "", "age": "", "race": "",
+		"careers": "", "archetype": "", "n_perks": "",
+		"seed": "1532de8a7946fc4c",
+	}
+	c := NewCharacter(o)
+	if c.Race != "Human (Scharde)" {
+		t.Errorf("Incorrect race. Expected 'Human (Scharde)'. Found '%s'.", o["race"])
+	}
+	car := strings.Join(c.Careers, "/")
+	if car != "Field Mechanik/Cutthroat" {
+		t.Errorf("Incorrect careers. Expected 'Field Mechanik/Cutthroat'. Found '%s'.", o["careers"])
+	}
+
 }
