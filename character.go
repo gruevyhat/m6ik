@@ -212,7 +212,7 @@ func (c *Character) generateGender(gender string) {
 
 func contains(arr []string, s string) bool {
 	for _, a := range arr {
-		if a == s { // || strings.HasPrefix(a, s) || strings.HasPrefix(s, a) {
+		if a == s || strings.HasPrefix(a, s) || strings.HasPrefix(s, a) {
 			return true
 		}
 	}
@@ -233,11 +233,8 @@ func (c *Character) applyConstraints(restr string) {
 		//restr = reCarType.ReplaceAllString(restr, "")
 		restrs := strings.Split(restr, ", ")
 		for _, r := range restrs {
-			if contains(Archetypes, r) {
-				CharDB.filter("Archetypes", "Archetype", "!=", r)
-			} else {
-				CharDB.filter("Careers", "Career", "!=", r)
-			}
+			CharDB.filter("Archetypes", "Archetype", "!=", r)
+			CharDB.filter("Careers", "Career", "!=", r)
 		}
 	}
 }
@@ -316,6 +313,9 @@ func (c *Character) generateArchetype(archetype string) error {
 	c.AttrWeights[attr] += weightFactor
 	// Handle Gifted
 	if c.Archetype != "Gifted" {
+		for _, c := range Casters {
+			CharDB.Careers = filterDf(CharDB.Careers, "Type", "!=", c)
+		}
 		c.AttrWeights["Arcane"] = 0.0
 	}
 	// Apply restrictions
@@ -338,8 +338,6 @@ func (c *Character) generateCareers(careerOpts string) error {
 	if careerOpts == "" {
 		careers = CharDB.Careers.Col("Career").Records()
 		// sample first career
-		firstCareer = randomChoice(careers)
-		// Deal with Gifted
 		if c.Archetype == "Gifted" {
 			for _, car := range Casters {
 				if !contains(careers, car) {
@@ -352,6 +350,8 @@ func (c *Character) generateCareers(careerOpts string) error {
 				return errors.New("Gifted character needs a magical career.")
 			}
 			firstCareer = randomChoice(casters)
+		} else {
+			firstCareer = randomChoice(careers)
 		}
 		// sample second career
 		carRestr := filterDf(CharDB.Careers, "Career", "==", firstCareer).
@@ -468,6 +468,9 @@ func (c *Character) generateName(name string) {
 }
 
 func (c *Character) distributeAttrDice(nAttrs string) error {
+	if nAttrs == "" {
+		nAttrs = defaultAttrDice
+	}
 	attrDice, _ := strconv.Atoi(nAttrs)
 	if attrDice > baseAttrDice {
 		attrDice -= baseAttrDice
@@ -482,6 +485,9 @@ func (c *Character) distributeAttrDice(nAttrs string) error {
 }
 
 func (c *Character) distributeSkillDice(nSkills string) error {
+	if nSkills == "" {
+		nSkills = defaultSkillDice
+	}
 	skillDice, _ := strconv.Atoi(nSkills)
 	if skillDice > len(c.Skills)*4 {
 		return errors.New("Invalid number of skill dice. Using default.")
