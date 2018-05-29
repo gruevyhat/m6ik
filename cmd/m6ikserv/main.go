@@ -35,6 +35,8 @@ func Generate(w http.ResponseWriter, r *http.Request) {
 		"careers":   r.URL.Query().Get("careers"),
 		"archetype": r.URL.Query().Get("archetype"),
 		"n_perks":   r.URL.Query().Get("n_perks"),
+		"n_attrs":   r.URL.Query().Get("n_attrs"),
+		"n_skills":  r.URL.Query().Get("n_skills"),
 		"seed":      r.URL.Query().Get("seed"),
 	}
 	c := m6ik.NewCharacter(charOpts)

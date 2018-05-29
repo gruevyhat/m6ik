@@ -18,20 +18,24 @@ Options:
   --archetype	Mighty, Skilled, Intellectual, or Gifted.  
   --careers	Slash-delimited career list (e.g., Soldier/Spy).
   --n_perks	Number of random perks to assign.
+	--n_attrs	Number of starting attribute dice. [default: 15]
+	--n_skills	Number of starting skill dice. [default: 7]
   --seed	Character generation signature.
   -h --help
   --version
 `
 
 var Opts struct {
-	Name      string `docopt:"--name"`
-	Gender    string `docopt:"--gender"`
-	Age       string `docopt:"--age"`
-	Race      string `docopt:"--race"`
-	Careers   string `docopt:"--careers"`
-	Archetype string `docopt:"--archetype"`
-	NPerks    string `docopt:"--n_perks"`
-	Seed      string `docopt:"--seed"`
+	Name       string `docopt:"--name"`
+	Gender     string `docopt:"--gender"`
+	Age        string `docopt:"--age"`
+	Race       string `docopt:"--race"`
+	Careers    string `docopt:"--careers"`
+	Archetype  string `docopt:"--archetype"`
+	NPerks     string `docopt:"--n_perks"`
+	NAttrDice  string `docopt:"--n_attrs"`
+	NSkillDice string `docopt:"--n_skills"`
+	Seed       string `docopt:"--seed"`
 }
 
 func main() {
@@ -47,6 +51,8 @@ func main() {
 		"careers":   Opts.Careers,
 		"archetype": Opts.Archetype,
 		"n_perks":   Opts.NPerks,
+		"n_attrs":   Opts.NAttrDice,
+		"n_skills":  Opts.NSkillDice,
 		"seed":      Opts.Seed,
 	}
 

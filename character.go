@@ -10,10 +10,11 @@ import (
 )
 
 const (
-	startingAttrDice  int     = 5
-	startingSkillDice int     = 7
-	pipsPerDie        int     = 3
-	weightFactor      float64 = 3.0
+	baseAttrDice     int     = 10
+	defaultAttrDice  string  = "15"
+	defaultSkillDice string  = "7"
+	pipsPerDie       int     = 3
+	weightFactor     float64 = 3.0
 )
 
 var (
@@ -152,7 +153,7 @@ func getKeys(m map[string]*Die) []string {
 	for name := range m {
 		a = append(a, name)
 	}
-	sort.Strings(a)
+	//sort.Strings(a)
 	return a
 }
 
@@ -412,6 +413,7 @@ func (c *Character) generateSkills() {
 		}
 		a := filterDf(CharDB.Skills, "Skill", "==", n).Col("Attribute").Records()[0]
 		c.Skills[n] = &d
+		c.Skills[n].codeMax += c.Attributes[a].code
 		c.Skills[n].addP(c.Attributes[a])
 		c.SkillWeights[n] = c.AttrWeights[a]
 	}
@@ -462,6 +464,31 @@ func (c *Character) generateName(name string) {
 	}
 }
 
+func (c *Character) distributeAttrDice(nAttrs string) error {
+	attrDice, _ := strconv.Atoi(nAttrs)
+	if attrDice > baseAttrDice {
+		attrDice -= baseAttrDice
+	}
+	if attrDice > len(Attributes)*2 {
+		return errors.New("Invalid number of attribute dice. Using default.")
+	}
+	for i := 0; i < attrDice; i++ {
+		c.promoteRandomAttribute(Die{code: 1})
+	}
+	return nil
+}
+
+func (c *Character) distributeSkillDice(nSkills string) error {
+	skillDice, _ := strconv.Atoi(nSkills)
+	if skillDice > len(c.Skills)*4 {
+		return errors.New("Invalid number of skill dice. Using default.")
+	}
+	for i := 0; i < skillDice; i++ {
+		c.promoteRandomSkill(Die{code: 1})
+	}
+	return nil
+}
+
 func NewCharacter(opts map[string]string) Character {
 
 	NewCharDB()
@@ -477,26 +504,39 @@ func NewCharacter(opts map[string]string) Character {
 
 	// Base stats
 	c.generateAttributes()
+
+	// Race
 	c.generateRace(opts["race"])
+
+	// Archetype
 	if err := c.generateArchetype(opts["archetype"]); err != nil {
 		fmt.Println(err)
 		c = NewCharacter(map[string]string{})
 		return c
 	}
+
+	// Careers
 	if err := c.generateCareers(opts["careers"]); err != nil {
 		fmt.Println(err)
 		c = NewCharacter(opts)
 		return c
 	}
 
-	// Distribute 5D among Attr.
-	for i := 0; i < startingAttrDice; i++ {
-		c.promoteRandomAttribute(Die{code: 1})
+	// Distribute dice among Attr.
+	if err := c.distributeAttrDice(opts["n_attrs"]); err != nil {
+		fmt.Println(err)
+		opts["n_attrs"] = defaultAttrDice
+		c = NewCharacter(opts)
+		return c
 	}
-	// Distribute 7D among Skills and Perks
+
+	// Distribute dice among Skills
 	c.generateSkills()
-	for i := 0; i < startingSkillDice; i++ {
-		c.promoteRandomSkill(Die{code: 1})
+	if err := c.distributeSkillDice(opts["n_skills"]); err != nil {
+		fmt.Println(err)
+		opts["n_skills"] = defaultSkillDice
+		c = NewCharacter(opts)
+		return c
 	}
 
 	// Perks
