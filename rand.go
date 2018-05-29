@@ -47,11 +47,11 @@ func weightedRandomChoice(choices []string, weights []float64) string {
 	for _, w := range weights {
 		sum += w
 	}
-	r := random.Float64() * sum
+	r := random.Float64()*sum - 1.0
 	total := 0.0
 	for i, w := range weights {
 		total += w
-		if r < total {
+		if r <= total {
 			return choices[i]
 		}
 	}

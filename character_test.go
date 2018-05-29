@@ -76,8 +76,8 @@ func TestNewCharacterRandom(t *testing.T) {
 		t.Errorf("Incorrect race. Expected 'Human (Scharde)'. Found '%s'.", o["race"])
 	}
 	car := strings.Join(c.Careers, "/")
-	if car != "Field Mechanik/Cutthroat" {
-		t.Errorf("Incorrect careers. Expected 'Field Mechanik/Cutthroat'. Found '%s'.", o["careers"])
+	if car != "Duelist/Pirate" {
+		t.Errorf("Incorrect careers. Expected 'Duelist/Pirate'. Found '%s'.", o["careers"])
 	}
 
 }

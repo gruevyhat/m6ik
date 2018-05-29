@@ -163,7 +163,7 @@ func (c *Character) promoteRandomAttribute(p Die) {
 		weights = append(weights, c.AttrWeights[k])
 	}
 	a := weightedRandomChoice(attrs, weights)
-	lessThanMax := p.toPips()+c.Attributes[a].toPips() <= c.Attributes[a].codeMax*pipsPerDie
+	lessThanMax := p.toPips()+c.Attributes[a].toPips() <= c.Attributes[a].codeMax*pipsPerDie+2
 	if c.AttrWeights[a] > 0.0 && lessThanMax {
 		c.Attributes[a].add(p)
 	} else {
@@ -178,7 +178,7 @@ func (c *Character) promoteRandomSkill(p Die) {
 		weights = append(weights, c.SkillWeights[k])
 	}
 	sk := weightedRandomChoice(sks, weights)
-	lessThanMax := p.toPips()+c.Skills[sk].toPips() <= c.Skills[sk].codeMax*pipsPerDie+2
+	lessThanMax := p.toPips()+c.Skills[sk].toPips() <= c.Skills[sk].codeMax*pipsPerDie
 	if c.SkillWeights[sk] > 0.0 && lessThanMax {
 		c.Skills[sk].add(p)
 	} else {
@@ -232,8 +232,11 @@ func (c *Character) applyConstraints(restr string) {
 		//restr = reCarType.ReplaceAllString(restr, "")
 		restrs := strings.Split(restr, ", ")
 		for _, r := range restrs {
-			CharDB.filter("Archetypes", "Archetype", "!=", r)
-			CharDB.filter("Careers", "Career", "!=", r)
+			if contains(Archetypes, r) {
+				CharDB.filter("Archetypes", "Archetype", "!=", r)
+			} else {
+				CharDB.filter("Careers", "Career", "!=", r)
+			}
 		}
 	}
 }
@@ -285,13 +288,17 @@ func (c *Character) generateRace(race string) {
 	}
 }
 
-func (c *Character) generateArchetype(archetype string) {
+func (c *Character) generateArchetype(archetype string) error {
 	// Sample.
 	if archetype == "" {
 		archs := CharDB.Archetypes.Col("Archetype").Records()
 		c.Archetype = randomChoice(archs)
 	} else {
 		c.Archetype = archetype
+	}
+	CharDB.Archetypes = filterDf(CharDB.Archetypes, "Archetype", "==", c.Archetype)
+	if len(CharDB.Archetypes.Col("Archetype").Records()) == 0 {
+		return errors.New("Bad race/archetype combination. Randomizing.")
 	}
 	// Weight Attribute
 	var attr string
@@ -309,9 +316,6 @@ func (c *Character) generateArchetype(archetype string) {
 	// Handle Gifted
 	if c.Archetype != "Gifted" {
 		c.AttrWeights["Arcane"] = 0.0
-		for _, caster := range Casters {
-			CharDB.filter("Careers", "Type", "!=", caster)
-		}
 	}
 	// Apply restrictions
 	archCon := CharDB.Archetypes.Col("Proscriptions").Records()[0]
@@ -322,14 +326,14 @@ func (c *Character) generateArchetype(archetype string) {
 		b = randomChoice(strings.Split(b, " or "))
 	}
 	a, d := parseBonus(b)
+	d.codeMax += d.code
 	c.promoteAttribute(a, d)
+	return nil
 }
 
 func (c *Character) generateCareers(careerOpts string) error {
 	careers := []string{}
-	var (
-		firstCareer, secondCareer string
-	)
+	var firstCareer, secondCareer string
 	if careerOpts == "" {
 		careers = CharDB.Careers.Col("Career").Records()
 		// sample first career
@@ -474,11 +478,13 @@ func NewCharacter(opts map[string]string) Character {
 	// Base stats
 	c.generateAttributes()
 	c.generateRace(opts["race"])
-	c.generateArchetype(opts["archetype"])
-	err := c.generateCareers(opts["careers"])
-	if err != nil {
+	if err := c.generateArchetype(opts["archetype"]); err != nil {
 		fmt.Println(err)
-		NewCharDB()
+		c = NewCharacter(map[string]string{})
+		return c
+	}
+	if err := c.generateCareers(opts["careers"]); err != nil {
+		fmt.Println(err)
 		c = NewCharacter(opts)
 		return c
 	}
