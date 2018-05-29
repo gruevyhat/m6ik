@@ -6,11 +6,14 @@ import (
 	"log"
 	"net/http"
 	"runtime"
+	"sync"
 
 	"github.com/docopt/docopt-go"
 	"github.com/gorilla/mux"
 	"github.com/gruevyhat/m6ik"
 )
+
+var mutex sync.Mutex
 
 var usage = `M6IK Character Generation Service
 
@@ -39,7 +42,9 @@ func Generate(w http.ResponseWriter, r *http.Request) {
 		"n_skills":  r.URL.Query().Get("n_skills"),
 		"seed":      r.URL.Query().Get("seed"),
 	}
+	mutex.Lock()
 	c := m6ik.NewCharacter(charOpts)
+	mutex.Unlock()
 	json.NewEncoder(w).Encode(c.ToJSON())
 }
 

@@ -389,6 +389,9 @@ func (c *Character) generateCareers(careerOpts string) error {
 func parseSkillMax(skill string) (string, Die) {
 	r, _ := regexp.Compile(`(.*) (\d)D`)
 	sk := r.FindStringSubmatch(skill)
+	if len(sk) < 2 {
+		fmt.Println(skill, sk)
+	}
 	m, _ := strconv.Atoi(sk[2])
 	return sk[1], Die{codeMax: m}
 }
@@ -492,6 +495,7 @@ func (c *Character) distributeSkillDice(nSkills string) error {
 func NewCharacter(opts map[string]string) Character {
 
 	NewCharDB()
+
 	c := Character{}
 
 	// Set seed
