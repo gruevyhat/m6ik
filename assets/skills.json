@@ -66,6 +66,28 @@
     "IKRPG Skill": ""
   },
   {
+    "Skill": "Construct (Thrall)",
+    "Type": "Construct",
+    "Attribute": "Technical",
+    "Skill Type": "Occupational",
+    "Social": "",
+    "Advanced": "",
+    "Prerequisites": "",
+    "Description": "Creating, fixing, or modifying material resources.",
+    "IKRPG Skill": ""
+  },
+  {
+    "Skill": "Construct (Wold)",
+    "Type": "Construct",
+    "Attribute": "Technical",
+    "Skill Type": "Occupational",
+    "Social": "",
+    "Advanced": "",
+    "Prerequisites": "",
+    "Description": "Creating, fixing, or modifying material resources.",
+    "IKRPG Skill": ""
+  },
+  {
     "Skill": "Contortion",
     "Type": "Contortion",
     "Attribute": "Agility",
@@ -121,7 +143,29 @@
     "IKRPG Skill": ""
   },
   {
+    "Skill": "Craft (Glassworking)",
+    "Type": "Craft",
+    "Attribute": "Technical",
+    "Skill Type": "Occupational",
+    "Social": "",
+    "Advanced": "",
+    "Prerequisites": "",
+    "Description": "Creating, fixing, or modifying material resources.",
+    "IKRPG Skill": ""
+  },
+  {
     "Skill": "Craft (Gunsmithing)",
+    "Type": "Craft",
+    "Attribute": "Technical",
+    "Skill Type": "Occupational",
+    "Social": "",
+    "Advanced": "",
+    "Prerequisites": "",
+    "Description": "Creating, fixing, or modifying material resources.",
+    "IKRPG Skill": ""
+  },
+  {
+    "Skill": "Craft (Leatherworking)",
     "Type": "Craft",
     "Attribute": "Technical",
     "Skill Type": "Occupational",
@@ -143,7 +187,7 @@
     "IKRPG Skill": ""
   },
   {
-    "Skill": "Craft (Skinning)",
+    "Skill": "Craft (Ordinance)",
     "Type": "Craft",
     "Attribute": "Technical",
     "Skill Type": "Occupational",
@@ -166,50 +210,6 @@
   },
   {
     "Skill": "Craft (Weaponsmithing)",
-    "Type": "Craft",
-    "Attribute": "Technical",
-    "Skill Type": "Occupational",
-    "Social": "",
-    "Advanced": "",
-    "Prerequisites": "",
-    "Description": "Creating, fixing, or modifying material resources.",
-    "IKRPG Skill": ""
-  },
-  {
-    "Skill": "Craft (Ordinance)",
-    "Type": "Craft",
-    "Attribute": "Technical",
-    "Skill Type": "Occupational",
-    "Social": "",
-    "Advanced": "",
-    "Prerequisites": "",
-    "Description": "Creating, fixing, or modifying material resources.",
-    "IKRPG Skill": ""
-  },
-  {
-    "Skill": "Craft (Tharn equipment)",
-    "Type": "Craft",
-    "Attribute": "Technical",
-    "Skill Type": "Occupational",
-    "Social": "",
-    "Advanced": "",
-    "Prerequisites": "",
-    "Description": "Creating, fixing, or modifying material resources.",
-    "IKRPG Skill": ""
-  },
-  {
-    "Skill": "Craft (Thrall)",
-    "Type": "Craft",
-    "Attribute": "Technical",
-    "Skill Type": "Occupational",
-    "Social": "",
-    "Advanced": "",
-    "Prerequisites": "",
-    "Description": "Creating, fixing, or modifying material resources.",
-    "IKRPG Skill": ""
-  },
-  {
-    "Skill": "Craft (Wold)",
     "Type": "Craft",
     "Attribute": "Technical",
     "Skill Type": "Occupational",
@@ -517,7 +517,7 @@
     "IKRPG Skill": ""
   },
   {
-    "Skill": "Lore (National)",
+    "Skill": "Lore (Law)",
     "Type": "Lore",
     "Attribute": "Intellect",
     "Skill Type": "General",
@@ -528,7 +528,7 @@
     "IKRPG Skill": ""
   },
   {
-    "Skill": "Lore (Racial)",
+    "Skill": "Lore (National)",
     "Type": "Lore",
     "Attribute": "Intellect",
     "Skill Type": "General",
@@ -550,7 +550,7 @@
     "IKRPG Skill": ""
   },
   {
-    "Skill": "Lore (Law)",
+    "Skill": "Lore (Racial)",
     "Type": "Lore",
     "Attribute": "Intellect",
     "Skill Type": "General",
@@ -633,7 +633,7 @@
     "Skill Type": "General",
     "Social": "",
     "Advanced": "",
-    "Prerequisites": "",
+    "Prerequisites": "Mechanikal Engineering 5D",
     "Description": "Controlling a vehicle's movement.",
     "IKRPG Skill": ""
   },
@@ -754,7 +754,7 @@
     "Skill Type": "General",
     "Social": "",
     "Advanced": "Y",
-    "Prerequisites": "Lore 5D. Research 5D",
+    "Prerequisites": "Lore 5D, Research 5D",
     "Description": "Formal academic training over and above Lore skill maximums.",
     "IKRPG Skill": ""
   },

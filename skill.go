@@ -42,21 +42,26 @@ func (c *Character) generateSkills() {
 	// Add skill taxation.
 	skills = append(skills, "Dodge 4D")
 	skills = append(skills, "Search 4D")
+	// Deal with wildcard skills.
+	for _, skill := range skills {
+		if strings.Contains(skill, "(*)") {
+			pfx := skill[0 : len(skill)-7]
+			sfx := skill[len(skill)-3 : len(skill)]
+			sk := filterDf(CharDB.Skills, "Type", "==", pfx).Col("Skill").Records()
+			for _, s := range sk {
+				skills = append(skills, s+sfx)
+				skills = remove(skill, skills)
+			}
+		}
+	}
 	// Add a number (Int D * 3) of random general skills.
 	for n := 0; n <= c.Attributes["Intellect"].code*3; n++ {
 		idx := randomInt(0, len(GeneralSkills))
 		skills = append(skills, fmt.Sprintf("%s 4D", GeneralSkills[idx]))
 	}
-	for _, s := range skills {
-		n, d := parseSkillMax(s)
-		// Deal with wildcard skills.
-		if strings.HasSuffix(n, "(*)") {
-			pfx := n[0 : len(n)-4]
-			sk := filterDf(CharDB.Skills, "Type", "==", pfx).Col("Skill").Records()
-			idx := randomInt(0, len(sk))
-			n = GeneralSkills[idx]
-		}
-		// Set max and add points.
+	// Set max and add points.
+	for _, skill := range skills {
+		n, d := parseSkillMax(skill)
 		a := filterDf(CharDB.Skills, "Skill", "==", n).Col("Attribute").Records()[0]
 		c.Skills[n] = &d
 		c.Skills[n].codeMax += c.Attributes[a].code

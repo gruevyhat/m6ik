@@ -99,9 +99,11 @@ func NewCharacter(opts map[string]string) Character {
 	// Set seed
 	if opts["seed"] == "" {
 		c.Seed = seed
+		log.Info("NEW SEED:", c.Seed)
 	} else {
 		c.Seed = opts["seed"]
 		random = setSeed(c.Seed)
+		log.Info("OLD SEED:", c.Seed)
 	}
 
 	// Base stats
@@ -144,6 +146,7 @@ func NewCharacter(opts map[string]string) Character {
 	// Perks
 	if err := c.generatePerks(opts["n_perks"]); err != nil {
 		log.Warning(err)
+		opts["seed"] = ""
 		c = NewCharacter(opts)
 		return c
 	}
