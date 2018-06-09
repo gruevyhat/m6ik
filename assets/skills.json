@@ -77,17 +77,6 @@
     "IKRPG Skill": "Escape Artist"
   },
   {
-    "Skill": "Craft (*)",
-    "Type": "Craft",
-    "Attribute": "Technical",
-    "Skill Type": "Occupational",
-    "Social": "",
-    "Advanced": "",
-    "Prerequisites": "",
-    "Description": "Creating, fixing, or modifying material resources.",
-    "IKRPG Skill": ""
-  },
-  {
     "Skill": "Craft (Armorsmithing)",
     "Type": "Craft",
     "Attribute": "Technical",
@@ -495,17 +484,6 @@
     "IKRPG Skill": ""
   },
   {
-    "Skill": "Lore (*)",
-    "Type": "Lore",
-    "Attribute": "Intellect",
-    "Skill Type": "General",
-    "Social": "",
-    "Advanced": "",
-    "Prerequisites": "",
-    "Description": "Understanding of an area of knowledge.",
-    "IKRPG Skill": ""
-  },
-  {
     "Skill": "Lore (Arcane)",
     "Type": "Lore",
     "Attribute": "Intellect",
@@ -529,6 +507,39 @@
   },
   {
     "Skill": "Lore (History)",
+    "Type": "Lore",
+    "Attribute": "Intellect",
+    "Skill Type": "General",
+    "Social": "",
+    "Advanced": "",
+    "Prerequisites": "",
+    "Description": "Understanding of an area of knowledge.",
+    "IKRPG Skill": ""
+  },
+  {
+    "Skill": "Lore (National)",
+    "Type": "Lore",
+    "Attribute": "Intellect",
+    "Skill Type": "General",
+    "Social": "",
+    "Advanced": "",
+    "Prerequisites": "",
+    "Description": "Understanding of an area of knowledge.",
+    "IKRPG Skill": ""
+  },
+  {
+    "Skill": "Lore (Racial)",
+    "Type": "Lore",
+    "Attribute": "Intellect",
+    "Skill Type": "General",
+    "Social": "",
+    "Advanced": "",
+    "Prerequisites": "",
+    "Description": "Understanding of an area of knowledge.",
+    "IKRPG Skill": ""
+  },
+  {
+    "Skill": "Lore (Occult)",
     "Type": "Lore",
     "Attribute": "Intellect",
     "Skill Type": "General",
@@ -614,17 +625,6 @@
     "Prerequisites": "",
     "Description": "Influencing others or getting information out of them through bribery, honest discussion, debate, diplomacy, or speeches. Also useful in negotiations, business transactions, storytelling, and oration.",
     "IKRPG Skill": "Negotiation, Bribery, Seduction, Oratory"
-  },
-  {
-    "Skill": "Pilot (*)",
-    "Type": "Pilot",
-    "Attribute": "Agility",
-    "Skill Type": "General",
-    "Social": "",
-    "Advanced": "",
-    "Prerequisites": "",
-    "Description": "Controlling a vehicle's movement.",
-    "IKRPG Skill": ""
   },
   {
     "Skill": "Pilot (Derigible)",
@@ -800,17 +800,6 @@
     "Advanced": "",
     "Prerequisites": "",
     "Description": "Ranged combat; slings and slingshots.",
-    "IKRPG Skill": ""
-  },
-  {
-    "Skill": "Spellcraft (*)",
-    "Type": "Spellcraft",
-    "Attribute": "Arcane",
-    "Skill Type": "Magical",
-    "Social": "",
-    "Advanced": "Y",
-    "Prerequisites": "Arcane 1D",
-    "Description": "Spell Form.",
     "IKRPG Skill": ""
   },
   {

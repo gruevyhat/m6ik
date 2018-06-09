@@ -10,15 +10,10 @@ import (
 	"github.com/kniren/gota/series"
 )
 
-func getDataDir() string {
-	var dir string
-	if dir = os.Getenv("M6IK"); dir != "" {
-		return dir + "/"
-	} else if dir = os.Getenv("GOPATH"); dir != "" {
-		return dir + "/src/github.com/gruevyhat/m6ik/"
-	}
-	return "./"
-}
+const (
+	startErr = "\033[31m"
+	endErr   = "\033[0m"
+)
 
 var (
 	dataDir       = getDataDir()
@@ -30,11 +25,13 @@ var (
 	skillFile     = dataDir + "assets/skills.json"
 	spellFile     = dataDir + "assets/spells.json"
 	weaponFile    = dataDir + "assets/weapons.json"
-)
-
-const (
-	startErr = "\033[31m"
-	endErr   = "\033[0m"
+	Casters       []string
+	GeneralSkills []string
+	CharDB        = CharacterDatabase{}
+	ops           = map[string]series.Comparator{
+		"==": series.Eq,
+		"!=": series.Neq,
+	}
 )
 
 type CharacterDatabase struct {
@@ -128,8 +125,18 @@ type Weapon struct {
 	Special  string  `json:"Special"`
 }
 
+func getDataDir() string {
+	var dir string
+	if dir = os.Getenv("M6IK"); dir != "" {
+		return dir + "/"
+	} else if dir = os.Getenv("GOPATH"); dir != "" {
+		return dir + "/src/github.com/gruevyhat/m6ik/"
+	}
+	return "./"
+}
+
 func readJson(filename string) []byte {
-	raw := logger(ioutil.ReadFile)(filename)
+	raw, _ := ioutil.ReadFile(filename)
 	return raw
 }
 
@@ -166,13 +173,6 @@ func (c *CharacterDatabase) Build() {
 	var weaps = []Weapon{}
 	json.Unmarshal(readJson(weaponFile), &weaps)
 	c.Weapons = dataframe.LoadStructs(weaps)
-}
-
-var CharDB = CharacterDatabase{}
-
-var ops = map[string]series.Comparator{
-	"==": series.Eq,
-	"!=": series.Neq,
 }
 
 func dropIfNotIn(df dataframe.DataFrame, col string, vals []string) dataframe.DataFrame {
@@ -212,9 +212,8 @@ func (db *CharacterDatabase) filter(table, col, op, val string) {
 	}
 }
 
-var Casters []string
-
 func NewCharDB() {
 	CharDB.Build()
 	Casters = strings.Split(CharDB.Archetypes.Col("Proscriptions").Records()[0], ", ")
+	GeneralSkills = filterDf(CharDB.Skills, "SkillType", "==", "General").Col("Skill").Records()
 }
