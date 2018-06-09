@@ -17,10 +17,11 @@ Options:
   --race	The race and ethnicity.
   --archetype	Mighty, Skilled, Intellectual, or Gifted.  
   --careers	Slash-delimited career list (e.g., Soldier/Spy).
-  --n_perks	Number of random perks to assign.
-	--n_attrs	Number of starting attribute dice. [default: 15]
-	--n_skills	Number of starting skill dice. [default: 7]
+  --perks	Number of random perks to assign.
+	--attrs	Number of starting attribute dice. [default: 15]
+	--skills	Number of starting skill dice. [default: 7]
   --seed	Character generation signature.
+	--log-level	One of {INFO, WARNING, ERROR}. [default: ERROR]
   -h --help
   --version
 `
@@ -32,10 +33,11 @@ var Opts struct {
 	Race       string `docopt:"--race"`
 	Careers    string `docopt:"--careers"`
 	Archetype  string `docopt:"--archetype"`
-	NPerks     string `docopt:"--n_perks"`
-	NAttrDice  string `docopt:"--n_attrs"`
-	NSkillDice string `docopt:"--n_skills"`
+	NPerks     string `docopt:"--perks"`
+	NAttrDice  string `docopt:"--attrs"`
+	NSkillDice string `docopt:"--skills"`
 	Seed       string `docopt:"--seed"`
+	LogLevel   string `docopt:"--log-level"`
 }
 
 func main() {
@@ -50,10 +52,11 @@ func main() {
 		"race":      Opts.Race,
 		"careers":   Opts.Careers,
 		"archetype": Opts.Archetype,
-		"n_perks":   Opts.NPerks,
-		"n_attrs":   Opts.NAttrDice,
-		"n_skills":  Opts.NSkillDice,
+		"perks":     Opts.NPerks,
+		"attrs":     Opts.NAttrDice,
+		"skills":    Opts.NSkillDice,
 		"seed":      Opts.Seed,
+		"log-level": Opts.LogLevel,
 	}
 
 	c := m6ik.NewCharacter(opts)

@@ -8,8 +8,6 @@ import (
 	"github.com/op/go-logging"
 )
 
-var log = logging.MustGetLogger("m6ik")
-
 const (
 	baseAttrDice     int     = 10
 	defaultAttrDice  string  = "15"
@@ -90,11 +88,21 @@ func parseBonus(bonus string) (string, Die) {
 	return attr[1], Die{code: modsInt[0], pips: modsInt[1]}
 }
 
+var log = logging.MustGetLogger("m6ik")
+
+var logLevels = map[string]logging.Level{
+	"INFO":    logging.INFO,
+	"ERROR":   logging.ERROR,
+	"WARNING": logging.WARNING,
+}
+
 func NewCharacter(opts map[string]string) Character {
 
 	NewCharDB()
 
 	c := Character{}
+
+	logging.SetLevel(logLevels[opts["log-level"]], "")
 
 	// Set seed
 	if opts["seed"] == "" {
@@ -127,24 +135,24 @@ func NewCharacter(opts map[string]string) Character {
 	}
 
 	// Distribute dice among Attr.
-	if err := c.distributeAttrDice(opts["n_attrs"]); err != nil {
+	if err := c.distributeAttrDice(opts["attrs"]); err != nil {
 		log.Warning(err)
-		opts["n_attrs"] = defaultAttrDice
+		opts["attrs"] = defaultAttrDice
 		c = NewCharacter(opts)
 		return c
 	}
 
 	// Distribute dice among Skills
 	c.generateSkills()
-	if err := c.distributeSkillDice(opts["n_skills"]); err != nil {
+	if err := c.distributeSkillDice(opts["skills"]); err != nil {
 		log.Warning(err)
-		opts["n_skills"] = defaultSkillDice
+		opts["skills"] = defaultSkillDice
 		c = NewCharacter(opts)
 		return c
 	}
 
 	// Perks
-	if err := c.generatePerks(opts["n_perks"]); err != nil {
+	if err := c.generatePerks(opts["perks"]); err != nil {
 		log.Warning(err)
 		opts["seed"] = ""
 		c = NewCharacter(opts)
