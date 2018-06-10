@@ -41,6 +41,7 @@ func Generate(w http.ResponseWriter, r *http.Request) {
 		"n_attrs":   r.URL.Query().Get("n_attrs"),
 		"n_skills":  r.URL.Query().Get("n_skills"),
 		"seed":      r.URL.Query().Get("seed"),
+		"log-level": "ERROR",
 	}
 	mutex.Lock()
 	c := m6ik.NewCharacter(charOpts)
